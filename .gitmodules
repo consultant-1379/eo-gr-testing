@@ -1,0 +1,19 @@
+[submodule "bob"]
+	path = bob
+	url = ../../../../adp-cicd/bob
+
+[submodule "oss-integration-ci"]
+	path = oss-integration-ci
+	url = ../../../com.ericsson.oss.aeonic/oss-integration-ci
+
+[submodule "eo-install"]
+	path = eo-install
+	url = ../../../../rv/eo_automation/eo-install
+
+[submodule "am-integration-charts"]
+	path = am-integration-charts
+	url = ../../../com.ericsson.orchestration.mgmt/am-integration-charts
+
+[submodule "eo-integration-ci"]
+	path = eo-integration-ci
+	url = ../../../com.ericsson.oss.orchestration.eo/eo-integration-ci

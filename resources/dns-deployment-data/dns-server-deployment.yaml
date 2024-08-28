@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: dnsmasq-server
+  name: dnsmasq-server-deployment
+#  namespace: gr-dnsmasq-server (uncomment when create manually)
+spec:
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: dnsmasq-server
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: dnsmasq-server
+    spec:
+      volumes:
+      - name: dnsmasq-config
+        configMap:
+          name: dnsmasq-conf-configmap
+      containers:
+      - image: armdocker.rnd.ericsson.se/proj-eo-gr-testing/eo-gr-docker:latest-master
+        securityContext:
+          capabilities:
+            add:
+              - NET_ADMIN
+        volumeMounts:
+          - name: dnsmasq-config
+            mountPath: /etc/dnsmasq.conf
+            subPath: dnsmasq.conf
+          - name: dnsmasq-config
+            mountPath: /etc/resolv.conf
+            subPath: resolv.conf
+        imagePullPolicy: IfNotPresent
+        name: dnsmasq-server
+        ports:
+        - containerPort: 53
+          name: dns-tcp
+          protocol: TCP
+        - containerPort: 53
+          name: dns
+          protocol: UDP
+        args:
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}

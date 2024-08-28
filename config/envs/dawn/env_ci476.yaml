@@ -1,0 +1,47 @@
+---
+# Common details
+ENV_NAME: ci476
+MASTER_IP:  10.150.167.225
+MASTER_USERNAME: eccd
+MASTER_PKEY: https://arm.seli.gic.ericsson.se/artifactory/proj-eo-gr-testing-common-artifacts-generic-local/ssh_private_keys/ci476.pem
+
+# CCD details
+NAMESPACE: eo-deploy
+CCD_KUBECONFIG_PATH: https://arm.seli.gic.ericsson.se/artifactory/proj-eo-gr-testing-common-artifacts-generic-local/kubeconfig/ci476.conf
+CCD_KUBE_API_HOST: https://api.ccd-c15a7.athtem.eei.ericsson.se
+HELM_REGISTRY_HOST: https://helm.ccd-c15a7.athtem.eei.ericsson.se
+EO_GAS_HOST: gas.ccd-c15a7.athtem.eei.ericsson.se
+ICCR_IP: 10.150.173.87
+RO_SNMP_IP: 10.150.173.89
+
+# GR details
+GR_ORIGINAL_PRIMARY: true
+GR_HOST: gr.ccd-c15a7.athtem.eei.ericsson.se
+GR_USER_NAME: vnfm
+GR_USER_PASSWORD: Ericsson123!
+
+# EVNFM details
+EVNFM_HOST: https://evnfm.ccd-c15a7.athtem.eei.ericsson.se
+
+EVNFM_DEFAULT_USER_NAME: vnfm
+EVNFM_DEFAULT_USER_PASSWORD: Ericsson123!
+EVNFM_DEFAULT_TENANT: master
+PV_STORAGE_CLASS: network-block
+
+EVNFM_USER_NAME: eo-gr-user
+EVNFM_USER_PASSWORD: GrTestUserPwd123!
+
+# Registry details
+GLOBAL_REGISTRY_HOST: global-container-registry.ccd-c15a7.athtem.eei.ericsson.se
+DOCKER_REGISTRY_HOST: registry.ccd-c15a7.athtem.eei.ericsson.se
+REGISTRY_USER_NAME: vnfm-reg
+REGISTRY_USER_PASSWORD: Ericsson123!
+
+# Certificate details
+INTERMEDIATE_CERTIFICATE_PATH: eo-install/resources/ssl_certificates/eo_certs/ci476/intermediate-ca.crt
+
+# Cluster VIM details
+OPENSTACK_CLUSTER_AUTH_URL: https://cloud15a.athtem.eei.ericsson.se:13000
+OPENSTACK_CLUSTER_USER_NAME: ORCH_RV_Huracan_SMCCD_C15A7_admin
+OPENSTACK_CLUSTER_PASSWORD: admin123
+OPENSTACK_CLUSTER_PROJECT_NAME: ORCH_RV_Huracan_SMCCD_C15A7

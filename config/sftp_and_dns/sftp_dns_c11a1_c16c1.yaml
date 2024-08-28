@@ -1,0 +1,14 @@
+---
+# SFTP Server details
+SFTP_NAMESPACE: gr-sftp-server
+SFTP_CLUSTER_NAME: !from_key env_c16c1.yaml:ENV_NAME
+SFTP_KUBE_CONFIG: !from_key env_c16c1.yaml:CCD_KUBECONFIG_PATH
+SFTP_EXT_IP_ADDRESS: 10.150.61.15
+SFTP_USER_NAME: ericsson
+SFTP_PASSWORD: ericsson
+
+# DNS Server details
+DNS_SERVER_NAMESPACE: gr-dnsmasq-server
+DNS_SERVER_CLUSTER_NAME: !from_key env_c11a1.yaml:ENV_NAME
+DNS_SERVER_KUBE_CONFIG: !from_key env_c11a1.yaml:CCD_KUBECONFIG_PATH
+DNS_SERVER_EX_IP_ADDRESS: 10.32.187.69

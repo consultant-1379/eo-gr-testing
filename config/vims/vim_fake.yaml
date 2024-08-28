@@ -1,0 +1,55 @@
+---
+url: http://127.0.0.1
+vim_host: 127.0.0.1
+vim_ip: 127.0.0.1
+vim_object_id: fakeid
+os_admin_name: fakeadmin
+os_admin_password: fakepassword
+os_admin_vim_object_id: fakeid
+os_user_name: fakeuser
+os_user_password: fakepassword
+os_user_vim_object_id: fakeid
+os_ssh_user: fakesshuser
+os_ssh_password: fakepassword
+
+vim_type: OPENSTACK
+
+default_os_admin_name: fakeadmin
+default_os_admin_password: fakepassword
+default_os_project_name: fakeproject
+
+auth_url: http://127.0.0.1:5000/v3
+project_name: fakeproject
+os_project_domain_id: default
+os_user_domain_name: Default
+
+# openstack endpoint ports section:
+endpoints:
+  - keystone:
+      - version: 3.0
+      - port: 5000
+      - uri: /v3.0
+  - neutron:
+      - version: 2.0
+      - port: 9696
+      - uri: /
+  - nova:
+      - version: 2.1
+      - port: 8774
+      - uri: /v2.1
+  - heatstack:
+      - version: 1.0
+      - port: 8004
+      - uri: /v1
+  - glance:
+      - version: 2.0
+      - port: 9292
+      - uri: /
+  - cinder:
+      - version: 2.0
+      - port: 8776
+      - uri: /v2
+  - gnocchi:
+      - version: 1.0
+      - port: 8041
+      - uri: /

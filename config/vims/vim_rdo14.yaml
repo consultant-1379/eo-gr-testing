@@ -1,0 +1,55 @@
+---
+url: http://10.232.14.62
+vim_host: 10.232.14.62
+vim_ip: 10.232.14.62
+vim_object_id: f9668a509e1d4c36a842c8ab93458e41 # aka project_id
+os_admin_name: eo-admin
+os_admin_password: 546478c3ff9448f0
+os_admin_vim_object_id: 5730efe5072e4f35996082753124171c
+os_user_name: eo-user
+os_user_password: 546478c3ff9448f0
+os_user_vim_object_id: a15bafb19f3f4022b913fc499472501f
+os_ssh_user: root
+os_ssh_password: _rdoctrl_
+
+vim_type: OPENSTACK
+
+default_os_admin_name: admin
+default_os_admin_password: _rdoctrl_
+default_os_project_name: admin
+
+auth_url: http://10.232.14.62:5000/v3
+project_name: Ericsson
+os_project_domain_id: default
+os_user_domain_name: Default
+
+# openstack endpoint ports section:
+endpoints:
+  - keystone:
+      - version: 3.0
+      - port: 5000
+      - uri: /v3.0
+  - neutron:
+      - version: 2.0
+      - port: 9696
+      - uri: /
+  - nova:
+      - version: 2.1
+      - port: 8774
+      - uri: /v2.1
+  - heatstack:
+      - version: 1.0
+      - port: 8004
+      - uri: /v1
+  - glance:
+      - version: 2.0
+      - port: 9292
+      - uri: /
+  - cinder:
+      - version: 2.0
+      - port: 8776
+      - uri: /v2
+  - gnocchi:
+      - version: 1.0
+      - port: 8041
+      - uri: /

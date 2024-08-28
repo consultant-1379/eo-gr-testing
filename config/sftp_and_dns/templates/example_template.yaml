@@ -1,0 +1,16 @@
+---
+# SFTP Server details
+SFTP_NAMESPACE: # namespace name where SFTP server is deployed
+SFTP_CLUSTER_NAME: # k8s cluster name, please use !from_key reference tag, e.g. !from_key ci476.yaml:ENV_NAME
+SFTP_KUBE_CONFIG: # k8s config, please use !from_key reference tag, e.g. !from_key ci476.yaml:CCD_KUBECONFIG_PATH
+SFTP_EXT_IP_ADDRESS: # external IP for reach SFTP server
+SFTP_USER_NAME: # username for connecting to server, should be the same with site-values
+SFTP_PASSWORD: # password for connecting to server, should be the same with site-values
+
+# DNS Server details
+DNS_SERVER_NAMESPACE: # namespace name where DNS server is deployed
+DNS_SERVER_CLUSTER_NAME: # k8s cluster name, please use !from_key reference tag, e.g. !from_key ci476.yaml:ENV_NAME
+DNS_SERVER_KUBE_CONFIG: # k8s config, please use !from_key reference tag, e.g. !from_key ci476.yaml:CCD_KUBECONFIG_PATH
+DNS_SERVER_EX_IP_ADDRESS: # external IP for reach DNS server
+
+GLOBAL_DNS_IP: # Global DNS IP (optional)

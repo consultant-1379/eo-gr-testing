@@ -1,0 +1,17 @@
+---
+# SFTP Server details
+SFTP_NAMESPACE: sftp-dced
+SFTP_CLUSTER_NAME: !from_key env_flexi28594.yaml:ENV_NAME
+SFTP_KUBE_CONFIG: !from_key env_flexi28594.yaml:CCD_KUBECONFIG_PATH
+SFTP_EXT_IP_ADDRESS:
+SFTP_USER_NAME: ericsson
+SFTP_PASSWORD: ericsson
+
+# DNS Server details
+DNS_SERVER_NAMESPACE: gr-dnsmasq-server
+DNS_SERVER_CLUSTER_NAME: !from_key env_flexi28723.yaml:ENV_NAME
+DNS_SERVER_KUBE_CONFIG: !from_key env_flexi28723.yaml:CCD_KUBECONFIG_PATH
+DNS_SERVER_EX_IP_ADDRESS: 10.237.38.196
+
+# GLOBAL DNS
+GLOBAL_DNS_IP: 136.225.240.27

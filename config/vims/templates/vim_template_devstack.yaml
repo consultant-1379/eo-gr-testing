@@ -1,0 +1,50 @@
+---
+url:
+vim_host:
+vim_ip:
+os_admin_name:
+os_admin_password:
+os_user_name:
+os_user_password:
+os_ssh_user:
+os_ssh_password:
+
+default_os_admin_name:
+default_os_admin_password:
+default_os_project_name:
+
+auth_url:
+project_name:
+os_project_domain_id:
+os_user_domain_name:
+
+# devstack endpoint ports section:
+endpoints:
+  - keystone:
+      - version: 3.0
+      - port: 5000
+      - uri: /
+  - neutron:
+      - version: 2.0
+      - port: 9696
+      - uri: /
+  - nova:
+      - version: 2.0
+      - port: 8774
+      - uri: /v2.0
+  - heatstack:
+      - version: 1.0
+      - port: 8004
+      - uri: /v1
+  - glance:
+      - version: 1.0
+      - port: 9292
+      - uri: /v1
+  - cinder:
+      - version: 2.0
+      - port: 8776
+      - uri: /v2
+  - gnocchi:
+      - version: 1.0
+      - port: 8041
+      - uri: /

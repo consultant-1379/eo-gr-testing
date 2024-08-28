@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: gr-iperf
+  name: gr-iperf-server
+  namespace: gr-iperf
+spec:
+  containers:
+  - name: iperf-server
+    image: armdockerhub.rnd.ericsson.se/networkstatic/iperf3
+    imagePullPolicy: Always
+    command: ["iperf3", "-s", "-p", "5201"]
+    ports:
+      - containerPort: 5201
+        name: iperf3
+        protocol: TCP

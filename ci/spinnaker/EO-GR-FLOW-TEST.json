@@ -1,0 +1,2331 @@
+{
+  "appConfig": {},
+  "disabled": false,
+  "keepWaitingPipelines": true,
+  "lastModifiedBy": "ZHRESER",
+  "limitConcurrent": true,
+  "notifications": [],
+  "parameterConfig": [
+    {
+      "default": "cloudman-docker-auth-config",
+      "description": "",
+      "hasOptions": false,
+      "label": "",
+      "name": "ARMDOCKER_USER_SECRET",
+      "options": [
+        {
+          "value": ""
+        }
+      ],
+      "pinned": false,
+      "required": false
+    },
+    {
+      "default": "cloudman-user-creds",
+      "description": "",
+      "hasOptions": false,
+      "label": "",
+      "name": "ARM_REGISTRY_USER_SECRET",
+      "options": [
+        {
+          "value": ""
+        }
+      ],
+      "pinned": false,
+      "required": false
+    },
+    {
+      "default": "YES",
+      "description": "",
+      "hasOptions": false,
+      "label": "",
+      "name": "RUN_EVNFM_TEST",
+      "options": [
+        {
+          "value": ""
+        }
+      ],
+      "pinned": false,
+      "required": false
+    },
+    {
+      "default": "YES",
+      "description": "",
+      "hasOptions": false,
+      "label": "",
+      "name": "RUN_SWITCHBACK_TEST",
+      "options": [
+        {
+          "value": ""
+        }
+      ],
+      "pinned": false,
+      "required": false
+    },
+    {
+      "default": "eric-eo-helmfile",
+      "description": "Name of the integration chart which will be used for the Initial install",
+      "hasOptions": false,
+      "label": "",
+      "name": "INT_CHART_NAME",
+      "options": [
+        {
+          "value": ""
+        }
+      ],
+      "pinned": false,
+      "required": false
+    },
+    {
+      "default": "0.0.0",
+      "description": "Version of the Integration Chart which will be used for the Initial Install",
+      "hasOptions": false,
+      "label": "",
+      "name": "INT_CHART_VERSION",
+      "options": [
+        {
+          "value": ""
+        }
+      ],
+      "pinned": false,
+      "required": false
+    },
+    {
+      "default": "https://arm.seli.gic.ericsson.se/artifactory/proj-eo-drop-helm",
+      "description": "Repo of the Integration Chart which will be used for the Initial Install",
+      "hasOptions": false,
+      "label": "",
+      "name": "INT_CHART_REPO",
+      "options": [
+        {
+          "value": ""
+        }
+      ],
+      "pinned": false,
+      "required": false
+    },
+    {
+      "default": "evo_docker_engine_gic",
+      "description": "Label to choose which Jenkins slave to execute Jenkinsfiles against",
+      "hasOptions": false,
+      "label": "",
+      "name": "SLAVE_LABEL",
+      "options": [
+        {
+          "value": ""
+        }
+      ],
+      "pinned": false,
+      "required": true
+    },
+    {
+      "default": "cloudman-user-creds",
+      "description": "Functional user for logging into armdocker",
+      "hasOptions": false,
+      "label": "",
+      "name": "FUNCTIONAL_USER_SECRET",
+      "options": [
+        {
+          "value": ""
+        }
+      ],
+      "pinned": false,
+      "required": true
+    },
+    {
+      "default": "refs/heads/master",
+      "description": "Gerrit refspec of the eo-gr-testing repository",
+      "hasOptions": false,
+      "label": "",
+      "name": "GERRIT_REFSPEC",
+      "options": [
+        {
+          "value": ""
+        }
+      ],
+      "pinned": true,
+      "required": false
+    },
+    {
+      "default": "flexi28594",
+      "description": "Provide active site environment name. Any new envierment should be added to https://gerrit.ericsson.se/plugins/gitiles/OSS/EO-Parent/com.ericsson.oss.orchestration.eo.testware/eo-gr-testing/+/master/config/envs/",
+      "hasOptions": true,
+      "label": "ACTIVE_ENVIRONMENT",
+      "name": "ACTIVE_ENVIRONMENT",
+      "options": [
+        {
+          "value": "flexi28594"
+        },
+        {
+          "value": "flexi28723"
+        }
+      ],
+      "pinned": false,
+      "required": true
+    },
+    {
+      "default": "flexi28723",
+      "description": "Provide standby site environment name. Any new envierment should be added to https://gerrit.ericsson.se/plugins/gitiles/OSS/EO-Parent/com.ericsson.oss.orchestration.eo.testware/eo-gr-testing/+/master/config/envs/",
+      "hasOptions": true,
+      "label": "STANDBY_ENVIRONMENT",
+      "name": "STANDBY_ENVIRONMENT",
+      "options": [
+        {
+          "value": "flexi28594"
+        },
+        {
+          "value": "flexi28723"
+        }
+      ],
+      "pinned": false,
+      "required": true
+    },
+    {
+      "default": "true",
+      "description": "Pretty test logs for CVNFM, VMVNFM phases",
+      "hasOptions": true,
+      "label": "PRETTY_API_LOGS",
+      "name": "PRETTY_API_LOGS",
+      "options": [
+        {
+          "value": "false"
+        },
+        {
+          "value": "true"
+        }
+      ],
+      "pinned": false,
+      "required": false
+    },
+    {
+      "default": "false",
+      "description": "Set \"true\" to skip the test execution after the environment re-installation",
+      "hasOptions": true,
+      "label": "SKIP_TESTS",
+      "name": "SKIP_TESTS",
+      "options": [
+        {
+          "value": "true"
+        },
+        {
+          "value": "false"
+        }
+      ],
+      "pinned": false,
+      "required": false
+    },
+    {
+      "default": "honeypots/pooling/environments",
+      "description": "This is the directory within the Repo specified within the Gather-Env-Details Jenkins job where to find the pooling environment details",
+      "hasOptions": false,
+      "label": "ENV_DETAILS_DIR",
+      "name": "ENV_DETAILS_DIR",
+      "options": [
+        {
+          "value": ""
+        }
+      ],
+      "pinned": false,
+      "required": false
+    },
+    {
+      "default": "new-gr-site-a",
+      "description": "This is the label to search for that is attached to the environments in the Lockable Resource Plugin on Jenkins",
+      "hasOptions": false,
+      "label": "ENV_LABEL_SITE_A",
+      "name": "ENV_LABEL_SITE_A",
+      "options": [
+        {
+          "value": ""
+        }
+      ],
+      "pinned": false,
+      "required": false
+    },
+    {
+      "default": "new-gr-site-b-dns",
+      "description": "This is the label to search for that is attached to the environments in the Lockable Resource Plugin on Jenkins",
+      "hasOptions": false,
+      "label": "ENV_LABEL_SITE_B",
+      "name": "ENV_LABEL_SITE_B",
+      "options": [
+        {
+          "value": ""
+        }
+      ],
+      "pinned": false,
+      "required": false
+    },
+    {
+      "default": "GR App Staging",
+      "description": "",
+      "hasOptions": false,
+      "label": "FLOW_URL_TAG",
+      "name": "FLOW_URL_TAG",
+      "options": [
+        {
+          "value": ""
+        }
+      ],
+      "pinned": false,
+      "required": false
+    },
+    {
+      "default": "eric-crd-ns",
+      "description": "",
+      "hasOptions": false,
+      "label": "CRD_NAMESPACE",
+      "name": "CRD_NAMESPACE",
+      "options": [
+        {
+          "value": ""
+        }
+      ],
+      "pinned": false,
+      "required": false
+    },
+    {
+      "default": "eo-deploy",
+      "description": "namespace for deployment",
+      "hasOptions": false,
+      "label": "NAMESPACE",
+      "name": "NAMESPACE",
+      "options": [
+        {
+          "value": ""
+        }
+      ],
+      "pinned": false,
+      "required": false
+    },
+    {
+      "default": "site-values/eo/ci/template/site-values-latest.yaml",
+      "description": "",
+      "hasOptions": false,
+      "label": "PATH_TO_SITE_VALUES",
+      "name": "PATH_TO_SITE_VALUES",
+      "options": [
+        {
+          "value": ""
+        }
+      ],
+      "pinned": false,
+      "required": false
+    },
+    {
+      "default": "true",
+      "description": "",
+      "hasOptions": false,
+      "label": "USE_DM_PREPARE",
+      "name": "USE_DM_PREPARE",
+      "options": [
+        {
+          "value": ""
+        }
+      ],
+      "pinned": false,
+      "required": false
+    },
+    {
+      "default": "eoEvnfm eoVmvnfm",
+      "description": "Tags used to select which EO apps to install for II",
+      "hasOptions": false,
+      "label": "TAGS",
+      "name": "TAGS",
+      "options": [
+        {
+          "value": ""
+        }
+      ],
+      "pinned": false,
+      "required": false
+    },
+    {
+      "default": "3600",
+      "description": "",
+      "hasOptions": false,
+      "label": "HELM_TIMEOUT",
+      "name": "HELM_TIMEOUT",
+      "options": [
+        {
+          "value": ""
+        }
+      ],
+      "pinned": false,
+      "required": false
+    },
+    {
+      "default": "true",
+      "description": "",
+      "hasOptions": false,
+      "label": "SKIP_TOKEN_REFRESH",
+      "name": "SKIP_TOKEN_REFRESH",
+      "options": [
+        {
+          "value": ""
+        }
+      ],
+      "pinned": false,
+      "required": false
+    },
+    {
+      "default": "false",
+      "description": "",
+      "hasOptions": true,
+      "label": "SKIP_NS_DELETION",
+      "name": "SKIP_NS_DELETION",
+      "options": [
+        {
+          "value": "true"
+        },
+        {
+          "value": "false"
+        }
+      ],
+      "pinned": false,
+      "required": false
+    },
+    {
+      "default": "false",
+      "description": "Update superuser password on both sites",
+      "hasOptions": true,
+      "label": "CREATE_SUPERUSER_PASSWORD",
+      "name": "CREATE_SUPERUSER_PASSWORD",
+      "options": [
+        {
+          "value": "true"
+        }
+      ],
+      "pinned": false,
+      "required": false
+    }
+  ],
+  "schema": "1",
+  "stages": [
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "eo-gr-switchover-pipeline-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Run_GT_switchover_tests",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "ARMDOCKER_USER_SECRET": "${parameters.ARMDOCKER_USER_SECRET}",
+        "CRD_NAMESPACE": "${parameters.CRD_NAMESPACE}",
+        "FH_SNMP_ALARM_IP": "${SNMP_IP_SITE_A}",
+        "FULL_PATH_TO_SITE_VALUES_FILE": "${parameters.PATH_TO_SITE_VALUES}",
+        "FUNCTIONAL_USER_SECRET": "${parameters.ARM_REGISTRY_USER_SECRET}",
+        "GAS_HOSTNAME": "${GAS_SITE_A}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "GR_HOSTNAME": "${GR_SITE_A}",
+        "HELM_REGISTRY_HOSTNAME": "${HELM_REGISTRY_SITE_A}",
+        "HELM_TIMEOUT": "${parameters.HELM_TIMEOUT}",
+        "IAM_HOSTNAME": "${IAM_SITE_A}",
+        "INGRESS_IP": "${ICCR_IP_SITE_A}",
+        "INT_CHART_NAME": "${parameters.INT_CHART_NAME}",
+        "INT_CHART_REPO": "${parameters.INT_CHART_REPO}",
+        "INT_CHART_VERSION": "${parameters.INT_CHART_VERSION}",
+        "KUBECONFIG_FILE": "${KUBE_CONFIG_SITE_A}",
+        "NAMESPACE": "${parameters.NAMESPACE}",
+        "PASSIVE_SITE": "${parameters.STANDBY_ENVIRONMENT}",
+        "PATH_TO_CERTIFICATES_FILES": "eo-integration-ci/${PATH_TO_CERTIFICATES_FILES_SITE_A}",
+        "PATH_TO_SITE_VALUES_OVERRIDE_FILE": "${SITE_VALUES_OVERRIDE_SITE_A}",
+        "SLAVE_LABEL": "${parameters.SLAVE_LABEL}",
+        "TAGS": "${parameters.TAGS}",
+        "USE_DM_PREPARE": "${parameters.USE_DM_PREPARE}",
+        "VNFM_HOSTNAME": "${VNFM_SITE_A}",
+        "VNFM_REGISTRY_HOSTNAME": "${VNFM_REGISTRY_SITE_A}"
+      },
+      "refId": "40",
+      "requisiteStageRefIds": [
+        "147"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "eo-gr-tests-appstaging-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "VMVNFM Tests Phase A Before Switchover",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "GR_STAGE_SHARED_NAME": "${GR_STAGE_SHARED_NAME}",
+        "PASSIVE_SITE": "${parameters.STANDBY_ENVIRONMENT}",
+        "TEST_TAG": "vmvnfm_phase_A",
+        "USE_LOCAL_DNS": true,
+        "VIM": "c7b23"
+      },
+      "refId": "49",
+      "requisiteStageRefIds": [
+        "120"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "eo-gr-switchover-pipeline-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Run_GT_switchover_back_tests",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.STANDBY_ENVIRONMENT}",
+        "ARMDOCKER_USER_SECRET": "${parameters.ARMDOCKER_USER_SECRET}",
+        "CRD_NAMESPACE": "${parameters.CRD_NAMESPACE}",
+        "FH_SNMP_ALARM_IP": "${SNMP_IP_SITE_B}",
+        "FULL_PATH_TO_SITE_VALUES_FILE": "${parameters.PATH_TO_SITE_VALUES}",
+        "FUNCTIONAL_USER_SECRET": "${parameters.ARM_REGISTRY_USER_SECRET}",
+        "GAS_HOSTNAME": "${GAS_SITE_B}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "GR_HOSTNAME": "${GR_SITE_A}",
+        "HELM_REGISTRY_HOSTNAME": "${HELM_REGISTRY_SITE_B}",
+        "HELM_TIMEOUT": "${parameters.HELM_TIMEOUT}",
+        "IAM_HOSTNAME": "${IAM_SITE_A}",
+        "INGRESS_IP": "${ICCR_IP_SITE_B}",
+        "INT_CHART_NAME": "${parameters.INT_CHART_NAME}",
+        "INT_CHART_REPO": "${parameters.INT_CHART_REPO}",
+        "INT_CHART_VERSION": "${parameters.INT_CHART_VERSION}",
+        "KUBECONFIG_FILE": "${KUBE_CONFIG_SITE_A}",
+        "NAMESPACE": "${parameters.NAMESPACE}",
+        "PASSIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "PATH_TO_CERTIFICATES_FILES": "eo-integration-ci/${PATH_TO_CERTIFICATES_FILES_SITE_A}",
+        "PATH_TO_SITE_VALUES_OVERRIDE_FILE": "${SITE_VALUES_OVERRIDE_SITE_A}",
+        "SLAVE_LABEL": "${parameters.SLAVE_LABEL}",
+        "TAGS": "${parameters.TAGS}",
+        "USE_DM_PREPARE": "${parameters.USE_DM_PREPARE}",
+        "VNFM_HOSTNAME": "${VNFM_SITE_B}",
+        "VNFM_REGISTRY_HOSTNAME": "${VNFM_REGISTRY_SITE_B}"
+      },
+      "refId": "52",
+      "requisiteStageRefIds": [
+        "149"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "eo-gr-tests-appstaging-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "CVNFM Tests Phase C After SwithBack",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "GR_STAGE_SHARED_NAME": "${GR_STAGE_SHARED_NAME}",
+        "PRETTY_API_LOGS": "${parameters.PRETTY_API_LOGS}",
+        "RESOURCES_CLEAN_UP": true,
+        "TEST_TAG": "cvnfm_phase_C",
+        "USE_LOCAL_DNS": true,
+        "VIM": "c7b23"
+      },
+      "refId": "62",
+      "requisiteStageRefIds": [
+        "129",
+        "138"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "eo-gr-copy-kms-key-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Copy KMS key",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "PASSIVE_SITE": "${parameters.STANDBY_ENVIRONMENT}"
+      },
+      "refId": "70",
+      "requisiteStageRefIds": [
+        "113",
+        "134"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "continuePipeline": false,
+      "failPipeline": true,
+      "job": "Get-Latest-ChartOrHelmfile",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Get EO helmfile version",
+      "parameters": {
+        "INT_CHART_NAME": "${trigger['parameters']['INT_CHART_NAME']}",
+        "INT_CHART_VERSION": "${trigger['parameters']['INT_CHART_VERSION']}"
+      },
+      "propertyFile": "artifact.properties",
+      "refId": "72",
+      "requisiteStageRefIds": [
+        "92",
+        "125"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failOnFailedExpressions": false,
+      "failPipeline": false,
+      "job": "eo-gr-tests-appstaging-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "CVNFM Tests Phase A Before SwithOver",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "GR_STAGE_SHARED_NAME": "${GR_STAGE_SHARED_NAME}",
+        "PASSIVE_SITE": "${parameters.STANDBY_ENVIRONMENT}",
+        "PRETTY_API_LOGS": "${parameters.PRETTY_API_LOGS}",
+        "TEST_TAG": "cvnfm_phase_A",
+        "USE_LOCAL_DNS": true,
+        "VIM": "c7b23"
+      },
+      "refId": "73",
+      "requisiteStageRefIds": [
+        "120"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failOnFailedExpressions": false,
+      "failPipeline": false,
+      "job": "eo-gr-tests-appstaging-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "CVNFM Tests Phase B After SwithOver",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.STANDBY_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "GR_STAGE_SHARED_NAME": "${GR_STAGE_SHARED_NAME}",
+        "PRETTY_API_LOGS": "${parameters.PRETTY_API_LOGS}",
+        "TEST_TAG": "cvnfm_phase_B",
+        "USE_LOCAL_DNS": true,
+        "VIM": "c7b23"
+      },
+      "refId": "74",
+      "requisiteStageRefIds": [
+        "148"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "application": "eoapp",
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "name": "Get Env SITE A",
+      "pipeline": "4e1e48b0-3bbc-40b4-88ae-34835e37a5a0",
+      "pipelineParameters": {
+        "ENV_DETAILS_DIR": "${trigger['parameters']['ENV_DETAILS_DIR']}",
+        "ENV_LABEL": "${trigger['parameters']['ENV_LABEL_SITE_A']}",
+        "FLOW_URL_TAG": "${trigger['parameters']['FLOW_URL_TAG']}",
+        "SPINNAKER_FLOW_ID": "${execution['id']}"
+      },
+      "refId": "75",
+      "requisiteStageRefIds": [
+        "72"
+      ],
+      "type": "pipeline",
+      "waitForCompletion": true
+    },
+    {
+      "application": "eoapp",
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "name": "Install site A",
+      "pipeline": "97497273-cfb9-4794-90db-0a33887e8a06",
+      "pipelineParameters": {
+        "ARMDOCKER_USER_SECRET": "${trigger['parameters']['ARMDOCKER_USER_SECRET']}",
+        "CRD_NAMESPACE": "${trigger['parameters']['CRD_NAMESPACE']}",
+        "DEPLOYMENT_TYPE": "install",
+        "EO_HELM_REGISTRY_DEPLOY": "true",
+        "EO_HELM_REGISTRY_HOSTNAME": "${HELM_REGISTRY_SITE_A}",
+        "FUNCTIONAL_USER_SECRET": "${trigger['parameters']['FUNCTIONAL_USER_SECRET']}",
+        "GAS_HOSTNAME": "${GAS_SITE_A}",
+        "GR_HOSTNAME": "${GR_SITE_A}",
+        "HELM_TIMEOUT": "${trigger['parameters']['HELM_TIMEOUT']}",
+        "IAM_HOSTNAME": "${IAM_SITE_A}",
+        "ICCR_IP": "${#stage(\"Get Env SITE A\")[\"context\"][\"ICCR_IP\"]}",
+        "INT_CHART_NAME": "${trigger['parameters']['INT_CHART_NAME']}",
+        "INT_CHART_REPO": "${trigger['parameters']['INT_CHART_REPO']}",
+        "INT_CHART_VERSION": "${#stage(\"Get EO helmfile version\")[\"context\"][\"INT_CHART_VERSION\"]}",
+        "KUBE_CONFIG": "${#stage(\"Get Env SITE A\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "PATH_TO_CERTIFICATES_FILES": "eo-integration-ci/${PATH_TO_CERTIFICATES_FILES_SITE_A}",
+        "PATH_TO_SITE_VALUES_FILE": "${trigger['parameters']['PATH_TO_SITE_VALUES']}",
+        "PATH_TO_SITE_VALUES_OVERRIDE": "${SITE_VALUES_OVERRIDE_SITE_A}",
+        "SKIP_TOKEN_REFRESH": "${trigger['parameters']['SKIP_TOKEN_REFRESH']}",
+        "SNMP_IP": "${SNMP_IP_SITE_A}",
+        "TAGS": "${trigger['parameters']['TAGS']}",
+        "USE_DM_PREPARE": "${trigger['parameters']['USE_DM_PREPARE']}",
+        "VNFM_HOSTNAME": "${VNFM_SITE_A}",
+        "VNFM_REGISTRY_HOSTNAME": "${VNFM_REGISTRY_SITE_A}"
+      },
+      "refId": "76",
+      "requisiteStageRefIds": [
+        "146"
+      ],
+      "type": "pipeline",
+      "waitForCompletion": true
+    },
+    {
+      "application": "eoapp",
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "name": "Install site B",
+      "pipeline": "97497273-cfb9-4794-90db-0a33887e8a06",
+      "pipelineParameters": {
+        "ARMDOCKER_USER_SECRET": "${trigger['parameters']['ARMDOCKER_USER_SECRET']}",
+        "CRD_NAMESPACE": "${trigger['parameters']['CRD_NAMESPACE']}",
+        "DEPLOYMENT_TYPE": "install",
+        "EO_HELM_REGISTRY_DEPLOY": "true",
+        "EO_HELM_REGISTRY_HOSTNAME": "${HELM_REGISTRY_SITE_B}",
+        "FUNCTIONAL_USER_SECRET": "${trigger['parameters']['FUNCTIONAL_USER_SECRET']}",
+        "GAS_HOSTNAME": "${GAS_SITE_B}",
+        "GR_HOSTNAME": "${GR_SITE_B}",
+        "GR_SECONDARY_HOSTNAME": "dummy",
+        "HELM_TIMEOUT": "${trigger['parameters']['HELM_TIMEOUT']}",
+        "IAM_HOSTNAME": "${IAM_SITE_B}",
+        "ICCR_IP": "${#stage(\"Get Env SITE B\")[\"context\"][\"ICCR_IP\"]}",
+        "INT_CHART_NAME": "${trigger['parameters']['INT_CHART_NAME']}",
+        "INT_CHART_REPO": "${trigger['parameters']['INT_CHART_REPO']}",
+        "INT_CHART_VERSION": "${#stage(\"Get EO helmfile version\")[\"context\"][\"INT_CHART_VERSION\"]}",
+        "KUBE_CONFIG": "${#stage(\"Get Env SITE B\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "PATH_TO_CERTIFICATES_FILES": "eo-integration-ci/${PATH_TO_CERTIFICATES_FILES_SITE_B}",
+        "PATH_TO_SITE_VALUES_FILE": "${trigger['parameters']['PATH_TO_SITE_VALUES']}",
+        "PATH_TO_SITE_VALUES_OVERRIDE": "${SITE_VALUES_OVERRIDE_SITE_B}",
+        "SKIP_TOKEN_REFRESH": "${trigger['parameters']['SKIP_TOKEN_REFRESH']}",
+        "SNMP_IP": "${SNMP_IP_SITE_B}",
+        "TAGS": "${trigger['parameters']['TAGS']}",
+        "USE_DM_PREPARE": "${trigger['parameters']['USE_DM_PREPARE']}",
+        "VNFM_HOSTNAME": "${VNFM_SITE_B}",
+        "VNFM_REGISTRY_HOSTNAME": "${VNFM_REGISTRY_SITE_B}"
+      },
+      "refId": "77",
+      "requisiteStageRefIds": [
+        "146"
+      ],
+      "type": "pipeline",
+      "waitForCompletion": true
+    },
+    {
+      "application": "eoapp",
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "name": "Get Env SITE B",
+      "pipeline": "4e1e48b0-3bbc-40b4-88ae-34835e37a5a0",
+      "pipelineParameters": {
+        "ENV_DETAILS_DIR": "${trigger['parameters']['ENV_DETAILS_DIR']}",
+        "ENV_LABEL": "${trigger['parameters']['ENV_LABEL_SITE_B']}",
+        "FLOW_URL_TAG": "${trigger['parameters']['FLOW_URL_TAG']}",
+        "SPINNAKER_FLOW_ID": "${execution['id']}"
+      },
+      "refId": "78",
+      "requisiteStageRefIds": [
+        "72"
+      ],
+      "type": "pipeline",
+      "waitForCompletion": true
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": false,
+      "failOnFailedExpressions": false,
+      "failPipeline": true,
+      "name": "Define hostnames site A",
+      "refId": "79",
+      "requisiteStageRefIds": [
+        "75"
+      ],
+      "type": "evaluateVariables",
+      "variables": [
+        {
+          "key": "VNFM_SITE_A",
+          "value": "${#stage(\"Get Env SITE A\")[\"context\"][\"EO_VNFM_HOSTNAME_ICCR\"]}"
+        },
+        {
+          "key": "VNFM_REGISTRY_SITE_A",
+          "value": "${#stage(\"Get Env SITE A\")[\"context\"][\"EO_VNFM_REGISTRY_HOSTNAME_ICCR\"]}"
+        },
+        {
+          "key": "IAM_SITE_A",
+          "value": "${#stage(\"Get Env SITE A\")[\"context\"][\"IAM_HOSTNAME_ICCR\"]}"
+        },
+        {
+          "key": "GAS_SITE_A",
+          "value": "${#stage(\"Get Env SITE A\")[\"context\"][\"EO_GAS_HOSTNAME_ICCR\"]}"
+        },
+        {
+          "key": "PATH_TO_CERTIFICATES_FILES_SITE_A",
+          "value": "${#stage(\"Get Env SITE A\")[\"context\"][\"PATH_TO_CERTIFICATES_FILES_ICCR\"]}"
+        },
+        {
+          "key": "HELM_REGISTRY_SITE_A",
+          "value": "${#stage(\"Get Env SITE A\")[\"context\"][\"EO_HELM_REGISTRY_HOSTNAME_ICCR\"]}"
+        },
+        {
+          "key": "SITE_VALUES_OVERRIDE_SITE_A",
+          "value": "${#stage(\"Get Env SITE A\")[\"context\"][\"PATH_TO_SITE_VALUES_OVERRIDE\"]}"
+        },
+        {
+          "key": "GR_SITE_A",
+          "value": "${#stage(\"Get Env SITE A\")[\"context\"][\"EO_GR_HOSTNAME_ICCR\"]}"
+        },
+        {
+          "key": "ICCR_IP_SITE_A",
+          "value": "${#stage(\"Get Env SITE A\")[\"context\"][\"ICCR_IP\"]}"
+        },
+        {
+          "key": "KUBE_CONFIG_SITE_A",
+          "value": "${#stage(\"Get Env SITE A\")[\"context\"][\"KUBE_CONFIG\"]}"
+        },
+        {
+          "key": "SNMP_IP_SITE_A",
+          "value": "${#stage(\"Get Env SITE A\")[\"context\"][\"RO_SNMP_IP\"]}"
+        }
+      ]
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": false,
+      "failOnFailedExpressions": false,
+      "failPipeline": true,
+      "name": "Define hostnames site B",
+      "refId": "80",
+      "requisiteStageRefIds": [
+        "78"
+      ],
+      "type": "evaluateVariables",
+      "variables": [
+        {
+          "key": "VNFM_SITE_B",
+          "value": "${#stage(\"Get Env SITE B\")[\"context\"][\"EO_VNFM_HOSTNAME_ICCR\"]}"
+        },
+        {
+          "key": "VNFM_REGISTRY_SITE_B",
+          "value": "${#stage(\"Get Env SITE B\")[\"context\"][\"EO_VNFM_REGISTRY_HOSTNAME_ICCR\"]}"
+        },
+        {
+          "key": "IAM_SITE_B",
+          "value": "${#stage(\"Get Env SITE B\")[\"context\"][\"IAM_HOSTNAME_ICCR\"]}"
+        },
+        {
+          "key": "GAS_SITE_B",
+          "value": "${#stage(\"Get Env SITE B\")[\"context\"][\"EO_GAS_HOSTNAME_ICCR\"]}"
+        },
+        {
+          "key": "PATH_TO_CERTIFICATES_FILES_SITE_B",
+          "value": "${#stage(\"Get Env SITE B\")[\"context\"][\"PATH_TO_CERTIFICATES_FILES_ICCR\"]}"
+        },
+        {
+          "key": "HELM_REGISTRY_SITE_B",
+          "value": "${#stage(\"Get Env SITE B\")[\"context\"][\"EO_HELM_REGISTRY_HOSTNAME_ICCR\"]}"
+        },
+        {
+          "key": "SITE_VALUES_OVERRIDE_SITE_B",
+          "value": "${#stage(\"Get Env SITE B\")[\"context\"][\"PATH_TO_SITE_VALUES_OVERRIDE\"]}"
+        },
+        {
+          "key": "GR_SITE_B",
+          "value": "${#stage(\"Get Env SITE B\")[\"context\"][\"EO_GR_HOSTNAME_ICCR\"]}"
+        },
+        {
+          "key": "ICCR_IP_SITE_B",
+          "value": "${#stage(\"Get Env SITE B\")[\"context\"][\"ICCR_IP\"]}"
+        },
+        {
+          "key": "KUBE_CONFIG_SITE_B",
+          "value": "${#stage(\"Get Env SITE B\")[\"context\"][\"KUBE_CONFIG\"]}"
+        },
+        {
+          "key": "SNMP_IP_SITE_B",
+          "value": "${#stage(\"Get Env SITE B\")[\"context\"][\"RO_SNMP_IP\"]}"
+        }
+      ]
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_Env_Logs",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Phase A - collect logs - site A",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE A\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "84",
+      "requisiteStageRefIds": [
+        "73",
+        "49"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_Env_Logs",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Phase A - collect logs - site B",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE B\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "85",
+      "requisiteStageRefIds": [
+        "73",
+        "49"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_Env_Logs",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Phase B - collect logs - site A",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE A\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "86",
+      "requisiteStageRefIds": [
+        "74",
+        "91"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_Env_Logs",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Phase B - collect logs - site B",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE B\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "87",
+      "requisiteStageRefIds": [
+        "74",
+        "91"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_Env_Logs",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Phase C - collect logs - site A",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE A\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "88",
+      "requisiteStageRefIds": [
+        "62",
+        "90"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_Env_Logs",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Phase C - collect logs - site B",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE B\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "89",
+      "requisiteStageRefIds": [
+        "62",
+        "90"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "eo-gr-tests-appstaging-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "VMVNFM Tests Phase C After SwitchBack",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "GR_STAGE_SHARED_NAME": "${GR_STAGE_SHARED_NAME}",
+        "RESOURCES_CLEAN_UP": true,
+        "TEST_TAG": "vmvnfm_phase_C",
+        "USE_LOCAL_DNS": true,
+        "VIM": "c7b23"
+      },
+      "refId": "90",
+      "requisiteStageRefIds": [
+        "129",
+        "138"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "eo-gr-tests-appstaging-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "VMVNFM Tests Phase B After Switchover",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.STANDBY_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "GR_STAGE_SHARED_NAME": "${GR_STAGE_SHARED_NAME}",
+        "PRETTY_API_LOGS": true,
+        "TEST_TAG": "vmvnfm_phase_B",
+        "USE_LOCAL_DNS": true,
+        "VIM": "c7b23"
+      },
+      "refId": "91",
+      "requisiteStageRefIds": [
+        "148"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failOnFailedExpressions": false,
+      "failPipeline": false,
+      "name": "Evaluate Global Variables",
+      "refId": "92",
+      "requisiteStageRefIds": [],
+      "type": "evaluateVariables",
+      "variables": [
+        {
+          "key": "GR_STAGE_SHARED_NAME",
+          "value": "suite-1-${new java.text.SimpleDateFormat(\"yyyy-dd-MM-hh-mm-ss\").format(new java.util.Date())}"
+        }
+      ]
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "eo-gr-clean-up-test-assets-and-dns",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Cleanup Test Assets and DNS Suite 1",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "GR_STAGE_SHARED_NAME": "${GR_STAGE_SHARED_NAME}",
+        "PASSIVE_SITE": "${parameters.STANDBY_ENVIRONMENT}",
+        "VIM": "c7b23"
+      },
+      "refId": "93",
+      "requisiteStageRefIds": [
+        "89",
+        "139"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "checkEOhealthStatus",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Check health - site A",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE A\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "94",
+      "requisiteStageRefIds": [
+        "76"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "checkEOhealthStatus",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Check health - site B",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE B\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "95",
+      "requisiteStageRefIds": [
+        "77"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failOnFailedExpressions": false,
+      "failPipeline": false,
+      "job": "eo-gr-tests-appstaging-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "CVNFM Tests Phase A Before SwithOver Suite 2",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "GR_STAGE_SHARED_NAME": "${GR_STAGE_SHARED_NAME}",
+        "PRETTY_API_LOGS": "${parameters.PRETTY_API_LOGS}",
+        "TEST_TAG": "cvnfm_phase_A",
+        "USE_LOCAL_DNS": true,
+        "VIM": "c7b23"
+      },
+      "refId": "96",
+      "requisiteStageRefIds": [
+        "124"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "eo-gr-tests-appstaging-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "VMVNFM Tests Phase A Before Switchover Suite2",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "GR_STAGE_SHARED_NAME": "${GR_STAGE_SHARED_NAME}",
+        "TEST_TAG": "vmvnfm_phase_A",
+        "USE_LOCAL_DNS": true,
+        "VIM": "c7b23"
+      },
+      "refId": "97",
+      "requisiteStageRefIds": [
+        "124"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "eo-gr-switchover-pipeline-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Run_GT_switchover_tests_Suite 2",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "ARMDOCKER_USER_SECRET": "${parameters.ARMDOCKER_USER_SECRET}",
+        "CRD_NAMESPACE": "${parameters.CRD_NAMESPACE}",
+        "FH_SNMP_ALARM_IP": "${SNMP_IP_SITE_A}",
+        "FULL_PATH_TO_SITE_VALUES_FILE": "${parameters.PATH_TO_SITE_VALUES}",
+        "FUNCTIONAL_USER_SECRET": "${parameters.ARM_REGISTRY_USER_SECRET}",
+        "GAS_HOSTNAME": "${GAS_SITE_A}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "GR_HOSTNAME": "${GR_SITE_A}",
+        "HELM_REGISTRY_HOSTNAME": "${HELM_REGISTRY_SITE_A}",
+        "HELM_TIMEOUT": "${parameters.HELM_TIMEOUT}",
+        "IAM_HOSTNAME": "${IAM_SITE_A}",
+        "INGRESS_IP": "${ICCR_IP_SITE_A}",
+        "INT_CHART_NAME": "${parameters.INT_CHART_NAME}",
+        "INT_CHART_REPO": "${parameters.INT_CHART_REPO}",
+        "INT_CHART_VERSION": "${parameters.INT_CHART_VERSION}",
+        "KUBECONFIG_FILE": "${KUBE_CONFIG_SITE_A}",
+        "NAMESPACE": "${parameters.NAMESPACE}",
+        "PASSIVE_SITE": "${parameters.STANDBY_ENVIRONMENT}",
+        "PATH_TO_CERTIFICATES_FILES": "eo-integration-ci/${PATH_TO_CERTIFICATES_FILES_SITE_A}",
+        "PATH_TO_SITE_VALUES_OVERRIDE_FILE": "${SITE_VALUES_OVERRIDE_SITE_A}",
+        "SLAVE_LABEL": "${parameters.SLAVE_LABEL}",
+        "SWITCHOVER_RULE": "run-switchover-while-active-site-unavailable",
+        "TAGS": "${parameters.TAGS}",
+        "USE_DM_PREPARE": "${parameters.USE_DM_PREPARE}",
+        "VNFM_HOSTNAME": "${VNFM_SITE_A}",
+        "VNFM_REGISTRY_HOSTNAME": "${VNFM_REGISTRY_SITE_A}"
+      },
+      "refId": "98",
+      "requisiteStageRefIds": [
+        "151"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failOnFailedExpressions": false,
+      "failPipeline": false,
+      "job": "eo-gr-tests-appstaging-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "CVNFM Tests Phase B After SwithOver Suite 2",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.STANDBY_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "GR_STAGE_SHARED_NAME": "${GR_STAGE_SHARED_NAME}",
+        "PRETTY_API_LOGS": "${parameters.PRETTY_API_LOGS}",
+        "TEST_TAG": "cvnfm_phase_B",
+        "USE_LOCAL_DNS": true,
+        "VIM": "c7b23"
+      },
+      "refId": "99",
+      "requisiteStageRefIds": [
+        "153"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "eo-gr-tests-appstaging-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "VMVNFM Tests Phase B After Switchover_Suite 2",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.STANDBY_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "GR_STAGE_SHARED_NAME": "${GR_STAGE_SHARED_NAME}",
+        "PRETTY_API_LOGS": true,
+        "TEST_TAG": "vmvnfm_phase_B",
+        "USE_LOCAL_DNS": true,
+        "VIM": "c7b23"
+      },
+      "refId": "100",
+      "requisiteStageRefIds": [
+        "153"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "eo-gr-switchover-pipeline-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Run_GT_switchover_back_tests_Suite2",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.STANDBY_ENVIRONMENT}",
+        "ARMDOCKER_USER_SECRET": "${parameters.ARMDOCKER_USER_SECRET}",
+        "CRD_NAMESPACE": "${parameters.CRD_NAMESPACE}",
+        "FH_SNMP_ALARM_IP": "${SNMP_IP_SITE_B}",
+        "FULL_PATH_TO_SITE_VALUES_FILE": "${parameters.PATH_TO_SITE_VALUES}",
+        "FUNCTIONAL_USER_SECRET": "${parameters.ARM_REGISTRY_USER_SECRET}",
+        "GAS_HOSTNAME": "${GAS_SITE_B}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "GR_HOSTNAME": "${GR_SITE_A}",
+        "HELM_REGISTRY_HOSTNAME": "${HELM_REGISTRY_SITE_B}",
+        "HELM_TIMEOUT": "${parameters.HELM_TIMEOUT}",
+        "IAM_HOSTNAME": "${IAM_SITE_A}",
+        "INGRESS_IP": "${ICCR_IP_SITE_B}",
+        "INT_CHART_NAME": "${parameters.INT_CHART_NAME}",
+        "INT_CHART_REPO": "${parameters.INT_CHART_REPO}",
+        "INT_CHART_VERSION": "${parameters.INT_CHART_VERSION}",
+        "KUBECONFIG_FILE": "${KUBE_CONFIG_SITE_A}",
+        "NAMESPACE": "${parameters.NAMESPACE}",
+        "PASSIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "PATH_TO_CERTIFICATES_FILES": "eo-integration-ci/${PATH_TO_CERTIFICATES_FILES_SITE_A}",
+        "PATH_TO_SITE_VALUES_OVERRIDE_FILE": "${SITE_VALUES_OVERRIDE_SITE_A}",
+        "SLAVE_LABEL": "${parameters.SLAVE_LABEL}",
+        "SWITCHOVER_RULE": "run-switchover-after-active-site-become-available",
+        "TAGS": "${parameters.TAGS}",
+        "VNFM_HOSTNAME": "${VNFM_SITE_B}",
+        "VNFM_REGISTRY_HOSTNAME": "${VNFM_REGISTRY_SITE_B}"
+      },
+      "refId": "101",
+      "requisiteStageRefIds": [
+        "152"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "eo-gr-tests-appstaging-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "CVNFM Tests Phase C After SwithBack Suite 2",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "GR_STAGE_SHARED_NAME": "${GR_STAGE_SHARED_NAME}",
+        "PRETTY_API_LOGS": "${parameters.PRETTY_API_LOGS}",
+        "RESOURCES_CLEAN_UP": true,
+        "TEST_TAG": "cvnfm_phase_C",
+        "USE_LOCAL_DNS": true,
+        "VIM": "c7b23"
+      },
+      "refId": "102",
+      "requisiteStageRefIds": [
+        "133",
+        "144"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "eo-gr-tests-appstaging-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "VMVNFM Tests Phase C After SwitchBack Suite 2",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "GR_STAGE_SHARED_NAME": "${GR_STAGE_SHARED_NAME}",
+        "RESOURCES_CLEAN_UP": true,
+        "TEST_TAG": "vmvnfm_phase_C",
+        "USE_LOCAL_DNS": true,
+        "VIM": "c7b23"
+      },
+      "refId": "103",
+      "requisiteStageRefIds": [
+        "133",
+        "144"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "eo-gr-clean-up-test-assets-and-dns",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Cleanup Test Assets Suite 2",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "GR_STAGE_SHARED_NAME": "${GR_STAGE_SHARED_NAME}",
+        "PASSIVE_SITE": "${parameters.STANDBY_ENVIRONMENT}",
+        "VIM": "c7b23"
+      },
+      "refId": "104",
+      "requisiteStageRefIds": [
+        "111",
+        "145"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failOnFailedExpressions": false,
+      "failPipeline": false,
+      "name": "Evaluate Global Variables Suite 2",
+      "refId": "105",
+      "requisiteStageRefIds": [
+        "93"
+      ],
+      "type": "evaluateVariables",
+      "variables": [
+        {
+          "key": "GR_STAGE_SHARED_NAME",
+          "value": "suite-2-${new java.text.SimpleDateFormat(\"yyyy-dd-MM-hh-mm-ss\").format(new java.util.Date())}"
+        }
+      ]
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_Env_Logs",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Phase A - collect logs - site A  -Suite 2",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE A\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "106",
+      "requisiteStageRefIds": [
+        "96",
+        "97"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_Env_Logs",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Phase A - collect logs - site B - Suite 2",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE B\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "107",
+      "requisiteStageRefIds": [
+        "97",
+        "96"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_Env_Logs",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Phase B - collect logs - site A - Suite 2",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE A\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "108",
+      "requisiteStageRefIds": [
+        "99",
+        "100"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_Env_Logs",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Phase B - collect logs - site B - Suite 2",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE B\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "109",
+      "requisiteStageRefIds": [
+        "100",
+        "99"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_Env_Logs",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Phase C - collect logs - site A - Suite 2",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE A\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "110",
+      "requisiteStageRefIds": [
+        "102",
+        "103"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_Env_Logs",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Phase C - collect logs - site B - Suite 2",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE B\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "111",
+      "requisiteStageRefIds": [
+        "102",
+        "103"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_Env_Logs",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "collect logs after install - site A",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE A\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "112",
+      "requisiteStageRefIds": [
+        "94"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_Env_Logs",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "collect logs after install - site B",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE B\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "113",
+      "requisiteStageRefIds": [
+        "95"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "application": "eoapp",
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "name": "Install site A - suite2",
+      "pipeline": "97497273-cfb9-4794-90db-0a33887e8a06",
+      "pipelineParameters": {
+        "ARMDOCKER_USER_SECRET": "${trigger['parameters']['ARMDOCKER_USER_SECRET']}",
+        "CRD_NAMESPACE": "${trigger['parameters']['CRD_NAMESPACE']}",
+        "DEPLOYMENT_TYPE": "install",
+        "EO_HELM_REGISTRY_DEPLOY": "true",
+        "EO_HELM_REGISTRY_HOSTNAME": "${HELM_REGISTRY_SITE_A}",
+        "FUNCTIONAL_USER_SECRET": "${trigger['parameters']['FUNCTIONAL_USER_SECRET']}",
+        "GAS_HOSTNAME": "${GAS_SITE_A}",
+        "GR_HOSTNAME": "${GR_SITE_A}",
+        "HELM_TIMEOUT": "${trigger['parameters']['HELM_TIMEOUT']}",
+        "IAM_HOSTNAME": "${IAM_SITE_A}",
+        "ICCR_IP": "${#stage(\"Get Env SITE A\")[\"context\"][\"ICCR_IP\"]}",
+        "INT_CHART_NAME": "${trigger['parameters']['INT_CHART_NAME']}",
+        "INT_CHART_REPO": "${trigger['parameters']['INT_CHART_REPO']}",
+        "INT_CHART_VERSION": "${#stage(\"Get EO helmfile version\")[\"context\"][\"INT_CHART_VERSION\"]}",
+        "KUBE_CONFIG": "${#stage(\"Get Env SITE A\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "PATH_TO_CERTIFICATES_FILES": "eo-integration-ci/${PATH_TO_CERTIFICATES_FILES_SITE_A}",
+        "PATH_TO_SITE_VALUES_FILE": "${trigger['parameters']['PATH_TO_SITE_VALUES']}",
+        "PATH_TO_SITE_VALUES_OVERRIDE": "${SITE_VALUES_OVERRIDE_SITE_A}",
+        "SKIP_TOKEN_REFRESH": "${trigger['parameters']['SKIP_TOKEN_REFRESH']}",
+        "SNMP_IP": "${SNMP_IP_SITE_A}",
+        "TAGS": "${trigger['parameters']['TAGS']}",
+        "USE_DM_PREPARE": "${trigger['parameters']['USE_DM_PREPARE']}",
+        "VNFM_HOSTNAME": "${VNFM_SITE_A}",
+        "VNFM_REGISTRY_HOSTNAME": "${VNFM_REGISTRY_SITE_A}"
+      },
+      "refId": "114",
+      "requisiteStageRefIds": [
+        "150"
+      ],
+      "type": "pipeline",
+      "waitForCompletion": true
+    },
+    {
+      "application": "eoapp",
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "name": "Install site B - suite2",
+      "pipeline": "97497273-cfb9-4794-90db-0a33887e8a06",
+      "pipelineParameters": {
+        "ARMDOCKER_USER_SECRET": "${trigger['parameters']['ARMDOCKER_USER_SECRET']}",
+        "CRD_NAMESPACE": "${trigger['parameters']['CRD_NAMESPACE']}",
+        "DEPLOYMENT_TYPE": "install",
+        "EO_HELM_REGISTRY_DEPLOY": "true",
+        "EO_HELM_REGISTRY_HOSTNAME": "${HELM_REGISTRY_SITE_B}",
+        "FUNCTIONAL_USER_SECRET": "${trigger['parameters']['FUNCTIONAL_USER_SECRET']}",
+        "GAS_HOSTNAME": "${GAS_SITE_B}",
+        "GR_HOSTNAME": "${GR_SITE_B}",
+        "GR_SECONDARY_HOSTNAME": "dummy",
+        "HELM_TIMEOUT": "${trigger['parameters']['HELM_TIMEOUT']}",
+        "IAM_HOSTNAME": "${IAM_SITE_B}",
+        "ICCR_IP": "${#stage(\"Get Env SITE B\")[\"context\"][\"ICCR_IP\"]}",
+        "INT_CHART_NAME": "${trigger['parameters']['INT_CHART_NAME']}",
+        "INT_CHART_REPO": "${trigger['parameters']['INT_CHART_REPO']}",
+        "INT_CHART_VERSION": "${#stage(\"Get EO helmfile version\")[\"context\"][\"INT_CHART_VERSION\"]}",
+        "KUBE_CONFIG": "${#stage(\"Get Env SITE B\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "PATH_TO_CERTIFICATES_FILES": "eo-integration-ci/${PATH_TO_CERTIFICATES_FILES_SITE_B}",
+        "PATH_TO_SITE_VALUES_FILE": "${trigger['parameters']['PATH_TO_SITE_VALUES']}",
+        "PATH_TO_SITE_VALUES_OVERRIDE": "${SITE_VALUES_OVERRIDE_SITE_B}",
+        "SKIP_TOKEN_REFRESH": "${trigger['parameters']['SKIP_TOKEN_REFRESH']}",
+        "SNMP_IP": "${SNMP_IP_SITE_B}",
+        "TAGS": "${trigger['parameters']['TAGS']}",
+        "USE_DM_PREPARE": "${trigger['parameters']['USE_DM_PREPARE']}",
+        "VNFM_HOSTNAME": "${VNFM_SITE_B}",
+        "VNFM_REGISTRY_HOSTNAME": "${VNFM_REGISTRY_SITE_B}"
+      },
+      "refId": "115",
+      "requisiteStageRefIds": [
+        "150"
+      ],
+      "type": "pipeline",
+      "waitForCompletion": true
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "checkEOhealthStatus",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Check health - site A - suite2",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE A\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "116",
+      "requisiteStageRefIds": [
+        "114"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "checkEOhealthStatus",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Check health - site B - suite2",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE B\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "117",
+      "requisiteStageRefIds": [
+        "115"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_Env_Logs",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "collect logs after install - site A - suite2",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE A\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "118",
+      "requisiteStageRefIds": [
+        "116"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_Env_Logs",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "collect logs after install - site B - suite2",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE B\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "119",
+      "requisiteStageRefIds": [
+        "117"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "eo-gr-create-new-evnfm-user-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Create new EVNFM user",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "USE_LOCAL_DNS": true
+      },
+      "refId": "120",
+      "requisiteStageRefIds": [
+        "155"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "eo-gr-install-cvnfm-certificates-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Install CVNFM Certificates",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "USE_LOCAL_DNS": true
+      },
+      "refId": "121",
+      "requisiteStageRefIds": [
+        "70"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "eo-gr-install-cvnfm-certificates-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Install CVNFM Certificates Suite 2",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "USE_LOCAL_DNS": true
+      },
+      "refId": "122",
+      "requisiteStageRefIds": [
+        "123"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "eo-gr-copy-kms-key-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Copy KMS key Suite 2",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "PASSIVE_SITE": "${parameters.STANDBY_ENVIRONMENT}"
+      },
+      "refId": "123",
+      "requisiteStageRefIds": [
+        "119",
+        "140"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "eo-gr-create-new-evnfm-user-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Create new EVNFM user Suite 2",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "USE_LOCAL_DNS": true
+      },
+      "refId": "124",
+      "requisiteStageRefIds": [
+        "156"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "eo-gr-clean-up-test-assets-and-dns",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Cleanup VIM zone, CNF namespaces and DNS",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "DELETE_ALL": true,
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "PASSIVE_SITE": "${parameters.STANDBY_ENVIRONMENT}",
+        "VIM": "c7b23"
+      },
+      "refId": "125",
+      "requisiteStageRefIds": [],
+      "stageEnabled": {
+        "expression": "${parameters.SKIP_NS_DELETION == 'false'}",
+        "type": "expression"
+      },
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_Env_Logs",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "After switchover collect logs - site A",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE A\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}"
+      },
+      "refId": "126",
+      "requisiteStageRefIds": [
+        "40"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_Env_Logs",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "After switchover collect logs - site B",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE B\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}"
+      },
+      "refId": "127",
+      "requisiteStageRefIds": [
+        "40"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_Env_Logs",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "After switchback collect logs - site A",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE A\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}"
+      },
+      "refId": "128",
+      "requisiteStageRefIds": [
+        "52"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_Env_Logs",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "After switchback collect logs - site B",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE B\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}"
+      },
+      "refId": "129",
+      "requisiteStageRefIds": [
+        "52"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_Env_Logs",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "After switchover collect logs - site A Suite 2",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE A\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}"
+      },
+      "refId": "130",
+      "requisiteStageRefIds": [
+        "98"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_Env_Logs",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "After switchover collect logs - site B Suite 2",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE B\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}"
+      },
+      "refId": "131",
+      "requisiteStageRefIds": [
+        "98"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_Env_Logs",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "After switchback collect logs - site A Suite 2",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE A\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}"
+      },
+      "refId": "132",
+      "requisiteStageRefIds": [
+        "101"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_Env_Logs",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "After switchback collect logs - site B Suite 2",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE B\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}"
+      },
+      "refId": "133",
+      "requisiteStageRefIds": [
+        "101"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_VNFM_Server_Log",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "collect VMVNFM Server Log - site A",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE A\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "134",
+      "requisiteStageRefIds": [
+        "112"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_VNFM_Server_Log",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "collect VMVNFM Server Log - site A",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE A\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "135",
+      "requisiteStageRefIds": [
+        "84",
+        "85"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_VNFM_Server_Log",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Phase B - collect VMVNFM Server Log - site B",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE B\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "136",
+      "requisiteStageRefIds": [
+        "87",
+        "86"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_VNFM_Server_Log",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "After switchover collect VMVNFM Server Log - site B",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE B\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "137",
+      "requisiteStageRefIds": [
+        "126",
+        "127"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_VNFM_Server_Log",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "After switchback collect VMVNFM Server Log - site A",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE A\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "138",
+      "requisiteStageRefIds": [
+        "128"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_VNFM_Server_Log",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Phase C - collect VMVNFM Server Log - site A",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE A\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "139",
+      "requisiteStageRefIds": [
+        "88"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_VNFM_Server_Log",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "collect VMVNFM Server Log - site A - suite2",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE A\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "140",
+      "requisiteStageRefIds": [
+        "118"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_VNFM_Server_Log",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "collect VMVNFM Server Log - site A - Suite 2",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE A\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "141",
+      "requisiteStageRefIds": [
+        "106"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_VNFM_Server_Log",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "After switchover collect VMVNFM Server Log - site B Suite 2",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE B\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "142",
+      "requisiteStageRefIds": [
+        "131"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_VNFM_Server_Log",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Phase B - collect VMVNFM Server Log - site B Suite 2",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE B\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "143",
+      "requisiteStageRefIds": [
+        "109"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_VNFM_Server_Log",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "After switchback collect VMVNFM Server Log - site A - Suite 2",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE A\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "144",
+      "requisiteStageRefIds": [
+        "132"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "Collect_VNFM_Server_Log",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Phase C - collect VMVNFM Server Log - site A - Suite 2",
+      "parameters": {
+        "KUBECONFIG_FILE": "${#stage(\"Get Env SITE A\")[\"context\"][\"KUBE_CONFIG\"]}",
+        "NAMESPACE": "${trigger['parameters']['NAMESPACE']}",
+        "SLAVE_LABEL": "evo_docker_engine_gic"
+      },
+      "refId": "145",
+      "requisiteStageRefIds": [
+        "110"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "continuePipeline": false,
+      "failPipeline": true,
+      "job": "eo-gr-deploy-dns-server-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Deploy DNS server before the environment installation",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "PASSIVE_SITE": "${parameters.STANDBY_ENVIRONMENT}"
+      },
+      "refId": "146",
+      "requisiteStageRefIds": [
+        "79",
+        "80"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "eo-gr-deploy-dns-server-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Deploy DNS server before the switchover",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.STANDBY_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "PASSIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}"
+      },
+      "refId": "147",
+      "requisiteStageRefIds": [
+        "135"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "eo-gr-install-cvnfm-certificates-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Install CNF certificates on the site B",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.STANDBY_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "USE_LOCAL_DNS": true
+      },
+      "refId": "148",
+      "requisiteStageRefIds": [
+        "137"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "eo-gr-deploy-dns-server-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Deploy DNS server before the switchback",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "PASSIVE_SITE": "${parameters.STANDBY_ENVIRONMENT}"
+      },
+      "refId": "149",
+      "requisiteStageRefIds": [
+        "136"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "eo-gr-deploy-dns-server-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Deploy DNS server before the environment installation Suite 2",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "PASSIVE_SITE": "${parameters.STANDBY_ENVIRONMENT}"
+      },
+      "refId": "150",
+      "requisiteStageRefIds": [
+        "105"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "eo-gr-deploy-dns-server-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Deploy DNS server before the switchover Suite 2",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.STANDBY_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "PASSIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}"
+      },
+      "refId": "151",
+      "requisiteStageRefIds": [
+        "141",
+        "107"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "eo-gr-deploy-dns-server-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Deploy DNS server before the switchback Suite 2",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "PASSIVE_SITE": "${parameters.STANDBY_ENVIRONMENT}"
+      },
+      "refId": "152",
+      "requisiteStageRefIds": [
+        "143",
+        "108"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": false,
+      "continuePipeline": true,
+      "failPipeline": false,
+      "job": "eo-gr-install-cvnfm-certificates-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Install CNF certificates on the site B Suite 2",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.STANDBY_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "USE_LOCAL_DNS": true
+      },
+      "refId": "153",
+      "requisiteStageRefIds": [
+        "142",
+        "130"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "eo-gr-remove-dns-server-job",
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Remove DNS server",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "GERRIT_REFSPEC": "${parameters.GERRIT_REFSPEC}",
+        "PASSIVE_SITE": "${parameters.STANDBY_ENVIRONMENT}"
+      },
+      "refId": "154",
+      "requisiteStageRefIds": [
+        "104"
+      ],
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "eo-gr-update-superuser-password-job",
+      "markUnstableAsSuccessful": false,
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Update superuser password",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "PASSIVE_SITE": "${parameters.STANDBY_ENVIRONMENT}"
+      },
+      "refId": "155",
+      "requisiteStageRefIds": [
+        "121"
+      ],
+      "stageEnabled": {
+        "expression": "${parameters.CREATE_SUPERUSER_PASSWORD=='true'}",
+        "type": "expression"
+      },
+      "type": "jenkins"
+    },
+    {
+      "completeOtherBranchesThenFail": true,
+      "continuePipeline": false,
+      "failPipeline": false,
+      "job": "eo-gr-update-superuser-password-job",
+      "markUnstableAsSuccessful": false,
+      "master": "oss-aispinn-fem5s11-eiffel052",
+      "name": "Update superuser password Suite 2",
+      "parameters": {
+        "ACTIVE_SITE": "${parameters.ACTIVE_ENVIRONMENT}",
+        "PASSIVE_SITE": "${parameters.STANDBY_ENVIRONMENT}"
+      },
+      "refId": "156",
+      "requisiteStageRefIds": [
+        "122"
+      ],
+      "stageEnabled": {
+        "expression": "${parameters.CREATE_SUPERUSER_PASSWORD=='true'}",
+        "type": "expression"
+      },
+      "type": "jenkins"
+    }
+  ],
+  "triggers": [],
+  "updateTs": "1712673700720"
+}

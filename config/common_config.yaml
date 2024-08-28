@@ -1,0 +1,32 @@
+---
+# DNS (AAT) server
+DNS_CLIENT_HOST: 10.210.213.170
+DNS_CLIENT_USER: centos
+DNS_CLIENT_PASSWORD: centos
+DNS_DOCKER_IMAGE: armdocker.rnd.ericsson.se/proj-eo-gr-testing/eo-gr-docker:latest-master
+
+# DNS
+GLOBAL_DNS_IP: 159.107.173.3
+
+# eo-node
+EO_NODE_HOST: 10.232.14.77
+EO_NODE_USER: root
+EO_NODE_PASSWORD: ecm123
+
+# jFrog
+JFROG_AUTH_TOKEN: cmVmdGtuOjAxOjE3MzM4MzE0NDQ6YnN1enRkajB2UzNTQU1Ka1VENGZINHVLYm1p
+JFROG_AUTH_URL: https://arm.seli.gic.ericsson.se/access/api/v1/tokens
+JFROG_API_ARTIFACTORY_URL: https://arm.seli.gic.ericsson.se/artifactory/
+EM_SIMULATOR: https://arm.seli.gic.ericsson.se/artifactory/proj-eo-automated-gat-common-artifacts-generic-local/em_simulator/em_simulator.tar
+CREATE_SITE_CONFIG: https://arm.seli.gic.ericsson.se/artifactory/proj-eo-automated-gat-common-artifacts-generic-local/site_config/CreateTempSiteAthlone.yaml
+DELETE_SITE_CONFIG: https://arm.seli.gic.ericsson.se/artifactory/proj-eo-automated-gat-common-artifacts-generic-local/site_config/deleteTempSite.yaml
+
+# Packages
+WORKFLOW_PATH: https://arm1s11-eiffel004.eiffel.gic.ericsson.se:8443/nexus/service/local/repositories/releases/content/com/ericsson/vnflcm/examples/workflows/ERICvnflaf_CXP123456/2.71.1/ERICvnflaf_CXP123456-2.71.1.rpm
+GENERIC_WORKFLOW_PATH: https://arm.rnd.ki.sw.ericsson.se/artifactory/proj-vims-workflows-release-local/com/ericsson/ERICGenericWorkflows_CXP9034675_2/2.19.1/ERICGenericWorkflows_CXP9034675_2-2.19.1.rpm
+VMVNFM_PACKAGE_PATH: https://arm.seli.gic.ericsson.se/artifactory/proj-eo-automated-gat-common-artifacts-generic-local/vmvnfm_arts/vnflaf_etsi_tosca.zip
+
+# EO Certificates
+INTERMEDIATE_CERT: https://arm.seli.gic.ericsson.se/artifactory/proj-eo-automated-gat-common-artifacts-generic-local/cvnfm_certs_for_signed_cnfs/intermediate_1.pem
+ROOT_CERT: https://arm.seli.gic.ericsson.se/artifactory/proj-eo-automated-gat-common-artifacts-generic-local/cvnfm_certs_for_signed_cnfs/root.pem
+EO_CNF_CERT: https://arm.seli.gic.ericsson.se/artifactory/proj-eo-automated-gat-common-artifacts-generic-local/cvnfm_certs_for_signed_cnfs/signing-ca.cert

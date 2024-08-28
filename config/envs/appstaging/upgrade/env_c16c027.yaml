@@ -1,0 +1,29 @@
+---
+# Common details
+ENV_NAME: c16c027
+
+# CCD details
+NAMESPACE: eo-deploy
+CCD_KUBECONFIG_PATH: https://arm.seli.gic.ericsson.se/artifactory/proj-eo-gr-testing-common-artifacts-generic-local/kubeconfig/c16c027.conf
+HELM_REGISTRY_HOST: https://helm-registry.ccd-c16c027-sm.athtem.eei.ericsson.se
+ICCR_IP: 10.150.61.96
+
+# EVNFM details
+EVNFM_HOST: https://vnfm.ccd-c16c027-sm.athtem.eei.ericsson.se
+
+EVNFM_DEFAULT_USER_NAME: vnfm
+EVNFM_DEFAULT_USER_PASSWORD: Ericsson123!
+EVNFM_DEFAULT_TENANT: master
+PV_STORAGE_CLASS: network-block
+
+EVNFM_USER_NAME: vnfm
+EVNFM_USER_PASSWORD: Ericsson123!
+
+# Registry details
+GLOBAL_REGISTRY_HOST: registry.ccd-c16c027-sm.athtem.eei.ericsson.se
+DOCKER_REGISTRY_HOST: registry.ccd-c16c027-sm.athtem.eei.ericsson.se
+REGISTRY_USER_NAME: vnfm
+REGISTRY_USER_PASSWORD: Ericsson123!
+
+# Certificate details
+INTERMEDIATE_CERTIFICATE_PATH: eo-integration-ci/app-staging/ci/environment/C16C027/iccr/intermediate-ca.crt

@@ -1,0 +1,31 @@
+<!-- CSS styles defined here due to not being able to modify the <head> section -->
+<style>
+  .red-text {
+    color: red;
+  }
+  .black-text {
+    color: black;
+</style>
+
+<!-- Block for EO Versions-->
+{% block eo_versions %}
+<tr>
+  <th>Versions:</th>
+</tr>
+<tr>
+  <th>EO</th>
+  <td class="{% if 'not available' in eo %}red-text{% else %}black-text{% endif %}">{{ eo }} </td>
+</tr>
+<tr>
+  <th>DM</th>
+  <td class="{% if 'not available' in dm %}red-text{% else %}black-text{% endif %}">{{ dm }} </td>
+</tr>
+<tr>
+  <th>CVNFM</th>
+  <td class="{% if 'not available' in cvnfm %}red-text{% else %}black-text{% endif %}">{{ cvnfm }} </td>
+</tr>
+<tr>
+  <th>VM VNFM</th>
+  <td class="{% if 'not available' in vmvnfm %}red-text{% else %}black-text{% endif %}">{{ vmvnfm }} </td>
+</tr>
+{% endblock %}

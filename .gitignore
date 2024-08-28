@@ -1,0 +1,29 @@
+# virtualenv and chache
+venv
+
+# idea
+.idea
+
+# downloads and logging
+downloads
+downloaded_logs
+*.csar
+*.log
+*.iml
+
+# compiled bytecode
+*.pyc
+
+# environment conf
+.env
+env
+
+# cache
+.pytest_cache
+
+# git hooks
+pre-commit-check
+
+# test reports
+versions_report.html
+pytest_reports

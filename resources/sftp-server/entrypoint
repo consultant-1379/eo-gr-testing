@@ -1,0 +1,123 @@
+#!/bin/bash
+set -Eeo pipefail
+# A script that configures environment for the SFTP server including:
+# creating a user and its directories, configuring permissions adn generating SSH keys
+
+useraddOptions=(--no-user-group --badname)
+
+user=ericsson
+pass=ericsson
+
+uid=1100
+gid=100
+dir=eso
+
+# shellcheck disable=2154
+trap 's=$?; echo "$0: Error on line "$LINENO": $BASH_COMMAND"; exit $s' ERR
+
+reArgsMaybe="^[^:[:space:]]+:.*$" # Smallest indication of attempt to use argument
+
+# Allow running other programs, e.g. bash
+if [[ -z "$1" || "$1" =~ $reArgsMaybe ]]; then
+    startSshd=true
+else
+    startSshd=false
+fi
+
+function log() {
+    echo "[$0] $*"
+}
+
+if [ -n "$uid" ]; then
+    useraddOptions+=(--non-unique --uid "$uid")
+fi
+
+if [ -n "$gid" ]; then
+    if ! getent group "$gid" > /dev/null; then
+        groupadd --gid "$gid" "group_$gid"
+    fi
+
+    useraddOptions+=(--gid "$gid")
+fi
+
+useradd "${useraddOptions[@]}" "$user"
+mkdir -p "/home/$user"
+chown root:root "/home/$user"
+chmod 755 "/home/$user"
+
+# Retrieving user id to use it in chown commands instead of the user name
+# to avoid problems on alpine when the user name contains a '.'
+uid="$(id -u "$user")"
+
+if [ -n "$pass" ]; then
+    echo "$user:$pass" | chpasswd
+else
+    usermod -p "*" "$user" # disabled password
+fi
+
+# Add SSH keys to authorized_keys with valid permissions
+userKeysQueuedDir="/home/$user/.ssh/keys"
+if [ -d "$userKeysQueuedDir" ]; then
+    userKeysAllowedFileTmp="$(mktemp)"
+    userKeysAllowedFile="/home/$user/.ssh/authorized_keys"
+
+    for publickey in "$userKeysQueuedDir"/*; do
+        cat "$publickey" >> "$userKeysAllowedFileTmp"
+    done
+
+    # Remove duplicate keys
+    sort < "$userKeysAllowedFileTmp" | uniq > "$userKeysAllowedFile"
+
+    chown "$uid" "$userKeysAllowedFile"
+    chmod 600 "$userKeysAllowedFile"
+fi
+
+# Make sure dirs exists
+if [ -n "$dir" ]; then
+    IFS=',' read -ra dirArgs <<< "$dir"
+    for dirPath in "${dirArgs[@]}"; do
+        dirPath="/home/$user/$dirPath"
+        if [ ! -d "$dirPath" ]; then
+            log "Creating directory: $dirPath"
+            mkdir -p "$dirPath"
+            chown -R "$uid:users" "$dirPath"
+        else
+            log "Directory already exists: $dirPath"
+        fi
+    done
+fi
+
+
+# Generate unique ssh keys for this container, if needed
+if [ ! -f /etc/ssh/ssh_host_ed25519_key ]; then
+    ssh-keygen -t ed25519 -f /etc/ssh/ssh_host_ed25519_key -N ''
+fi
+if [ ! -f /etc/ssh/ssh_host_rsa_key ]; then
+    ssh-keygen -t rsa -b 4096 -f /etc/ssh/ssh_host_rsa_key -N ''
+fi
+
+# Restrict access from other users
+chmod 600 /etc/ssh/ssh_host_ed25519_key || true
+chmod 600 /etc/ssh/ssh_host_rsa_key || true
+
+
+# Source custom scripts, if any
+if [ -d /etc/sftp.d ]; then
+    for f in /etc/sftp.d/*; do
+        if [ -x "$f" ]; then
+            log "Running $f ..."
+            $f
+        else
+            log "Could not run $f, because it's missing execute permission (+x)."
+        fi
+    done
+    unset f
+fi
+
+if $startSshd; then
+    log "Executing sshd"
+    exec /usr/sbin/sshd -D -e
+else
+    log "Executing $*"
+    exec "$@"
+fi

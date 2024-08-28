@@ -1,0 +1,47 @@
+---
+# Common details
+ENV_NAME: c16c022
+MASTER_IP: 10.150.59.99
+MASTER_USERNAME: eccd
+MASTER_PKEY: https://arm.seli.gic.ericsson.se/artifactory/proj-eo-gr-testing-common-artifacts-generic-local/ssh_private_keys/c16c022.pem
+
+# CCD details
+NAMESPACE: eo-deploy
+CCD_KUBECONFIG_PATH: https://arm.seli.gic.ericsson.se/artifactory/proj-eo-gr-testing-common-artifacts-generic-local/kubeconfig/c16c022.conf
+CCD_KUBE_API_HOST: https://api.ccd-c16c022.athtem.eei.ericsson.se
+HELM_REGISTRY_HOST: https://helm.c16a033.athtem.eei.ericsson.se
+EO_GAS_HOST: gas.c16a033.athtem.eei.ericsson.se
+ICCR_IP: 10.150.61.26
+RO_SNMP_IP: 10.150.61.30
+
+# GR details
+GR_ORIGINAL_PRIMARY: false
+GR_HOST: gr.c16c022.athtem.eei.ericsson.se
+GR_USER_NAME: vnfm
+GR_USER_PASSWORD: Ericsson123!
+
+# EVNFM details
+EVNFM_HOST: https://evnfm.c16a033.athtem.eei.ericsson.se
+
+EVNFM_DEFAULT_USER_NAME: vnfm
+EVNFM_DEFAULT_USER_PASSWORD: Ericsson123!
+EVNFM_DEFAULT_TENANT: master
+PV_STORAGE_CLASS: network-block
+
+EVNFM_USER_NAME: eo-gr-user
+EVNFM_USER_PASSWORD: GrTestUserPwd123!
+
+# Registry details
+GLOBAL_REGISTRY_HOST: global-container-registry.c16a033.athtem.eei.ericsson.se
+DOCKER_REGISTRY_HOST: reg-evnfm.c16a033.athtem.eei.ericsson.se
+REGISTRY_USER_NAME: vnfm-reg
+REGISTRY_USER_PASSWORD: Ericsson123!
+
+# Certificate details
+INTERMEDIATE_CERTIFICATE_PATH: eo-install/resources/ssl_certificates/eo_certs/c16c022/intermediate-ca.crt
+
+# Cluster VIM details
+OPENSTACK_CLUSTER_AUTH_URL: https://cloud16c.athtem.eei.ericsson.se:13000
+OPENSTACK_CLUSTER_USER_NAME: ORCH_RV_CCD_C16C022_admin
+OPENSTACK_CLUSTER_PASSWORD: admin123
+OPENSTACK_CLUSTER_PROJECT_NAME: ORCH_RV_CCD_C16C022

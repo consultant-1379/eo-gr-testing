@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: sftp-dced
+  name: bur-sftp-dced
+#  namespace: gr-sftp-server (uncomment when create manually)
+spec:
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: sftp-dced
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: sftp-dced
+    spec:
+      containers:
+      - image: armdocker.rnd.ericsson.se/proj-eo-gr-testing/openssh-server:latest-master
+        imagePullPolicy: Always
+        name: sftp-server
+        ports:
+        - containerPort: 22
+          name: ssh
+          protocol: TCP
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: "1"
+            ephemeral-storage: "10Gi"
+          limits:
+            memory: "200Mi"
+            cpu: "1"
+            ephemeral-storage: "10Gi"
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}

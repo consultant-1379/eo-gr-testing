@@ -1,0 +1,50 @@
+---
+url:
+vim_host:
+vim_ip:
+os_admin_name:
+os_admin_password:
+os_user_name:
+os_user_password:
+os_ssh_user:
+os_ssh_password:
+
+default_os_admin_name:
+default_os_admin_password:
+default_os_project_name:
+
+auth_url:
+project_name:
+os_project_domain_id:
+os_user_domain_name:
+
+# openstack endpoint ports section:
+endpoints:
+  - keystone:
+      - version: 3.0
+      - port: 13000
+      - uri: /v3.0
+  - neutron:
+      - version: 2.0
+      - port: 13696
+      - uri: /
+  - nova:
+      - version: 2.1
+      - port: 13774
+      - uri: /v2.1
+  - heatstack:
+      - version: 1.0
+      - port: 13004
+      - uri: /v1
+  - glance:
+      - version: 2.0
+      - port: 13292
+      - uri: /
+  - cinder:
+      - version: 2.0
+      - port: 13776
+      - uri: /v2
+  - placement:
+      - version: 1.0
+      - port: 13778
+      - uri: /placement

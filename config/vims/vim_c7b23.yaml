@@ -1,0 +1,55 @@
+---
+url: https://10.150.150.136
+vim_host: 10.150.150.136
+vim_ip: 10.150.150.136
+vim_object_id: 05a0813bde7e45378ed2bce72f2dd078
+os_admin_name: eo-admin
+os_admin_password: admin123
+os_admin_vim_object_id: 5101bde73e1f4b8ab7e55e51dcaf2ecb
+os_user_name: ORCH_Staging_C7B23_admin
+os_user_password: admin123
+os_user_vim_object_id:
+os_ssh_user:
+os_ssh_password: admin123
+
+vim_type: OPENSTACK
+
+default_os_admin_name: eo-admin
+default_os_admin_password: admin123
+default_os_project_name: ORCH_Staging_C7B23
+
+auth_url: https://cloud7b.athtem.eei.ericsson.se:13000
+project_name: ORCH_Staging_C7B23
+os_project_domain_id: default
+os_user_domain_name: Default
+
+# openstack endpoint ports section:
+endpoints:
+  - keystone:
+      - version: 3.0
+      - port: 13000
+      - uri: /v3.0
+  - neutron:
+      - version: 2.0
+      - port: 13696
+      - uri: /
+  - nova:
+      - version: 2.1
+      - port: 13774
+      - uri: /v2.1
+  - heatstack:
+      - version: 1.0
+      - port: 13004
+      - uri: /v1
+  - glance:
+      - version: 2.0
+      - port: 13292
+      - uri: /
+  - cinder:
+      - version: 2.0
+      - port: 13776
+      - uri: /v2
+  - placement:
+      - version: 1.0
+      - port: 13778
+      - uri: /placement

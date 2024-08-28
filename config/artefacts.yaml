@@ -1,0 +1,76 @@
+---
+# descriptor_id field used only for internal usage
+
+# region CNF test artefacts
+
+cnf_test_package:
+  app: cvnfm
+  name: CNF Package for Instantiate
+  description: CNF package to test instantiate, terminate, rollback, modify, scale operations on CVNFM
+  actions:
+    - Instantiate
+    - Modify
+    - Rollback
+    - Scale Out
+    - Scale In
+  package_path: https://arm1s11-eiffel052.eiffel.gic.ericsson.se:8443/nexus/service/local/repositories/evnfm_testing_artifacts/content/tosca_1_3/SOL_4_2_1/multi/a/spider-app-multi-a-etsi-tosca-rel4/spider-app-multi-a-etsi-tosca-rel4-option1-option2/1.0.46/spider-app-multi-a-etsi-tosca-rel4-option1-option2-1.0.46.zip
+  descriptor_id: multi-chart-etsi-rel4-5fcb086597
+  additional_config_path:
+  additional_config_path_for_scale:
+  additional_config_path_for_change:
+  lcm_timeout: 3600
+  onboarding_timeout: 90
+
+cnf_test_upgrade_package:
+  app: cvnfm
+  name: CNF Package Upgrade
+  description: CNF package to test upgrade operation on CVNFM
+  actions:
+    - Upgrade
+    - Rollback
+  package_path: https://arm1s11-eiffel052.eiffel.gic.ericsson.se:8443/nexus/service/local/repositories/evnfm_testing_artifacts/content/tosca_1_3/SOL_4_2_1/multi/b/spider-app-multi-b-etsi-tosca-rel4/spider-app-multi-b-etsi-tosca-rel4-option1-option2/1.0.50/spider-app-multi-b-etsi-tosca-rel4-option1-option2-1.0.50.zip
+  descriptor_id: multi-chart-etsi-rel4-b-455379754e37
+  additional_config_path:
+  additional_config_path_for_scale:
+  additional_config_path_for_change:
+  lcm_timeout: 3600
+  onboarding_timeout: 90
+
+cnf_test_package_unsigned:
+  app: cvnfm
+  name: The unsigned CNF Package for Instantiate
+  description: The unsigned CNF package to test instantiate, terminate, rollback, modify, scale operations on CVNFM
+  actions:
+    - Instantiate
+    - Modify
+    - Rollback
+    - Scale Out
+    - Scale In
+  package_path: https://arm1s11-eiffel052.eiffel.gic.ericsson.se:8443/nexus/service/local/repositories/evnfm_testing_artifacts/content/tosca_1_2/SOL_2_5_1/multi/a/spider-app-multi-a-v2/spider-app-multi-a-v2/1.0.41/spider-app-multi-a-v2-1.0.41.csar
+  descriptor_id: multi-chart-477c-aab3-2b04e6a383
+  additional_config_path:
+  additional_config_path_for_scale:
+  additional_config_path_for_change:
+  lcm_timeout: 3600
+  onboarding_timeout: 90
+
+# endregion
+
+# region VNF test artefacts
+
+vmvnfm_test_package:
+  app: vmvnfm
+  name: VNFLCM package
+  descriptor_id: vnflcm
+  description: VNF package
+  package_path: https://arm.seli.gic.ericsson.se/artifactory/proj-eo-automated-gat-common-artifacts-generic-local/vmvnfm_arts/vnflcm_dynamicIPs.zip
+  # Note: In case of the package replacement the following parameters MUST BE UPDATED from the package's ./Definitions/vnflcm.yaml file:
+  # topology_template | node_templates | vnflcm-management-node |
+  #  - srt_ram - capabilities | virtual_compute | properties | virtual_memory | virtual_mem_size
+  #  - srt_cpu - capabilities | virtual_compute | properties | virtual_cpu | num_virtual_cpu
+  #  - srt_disc_size - properties| sw_image_data | min_disk
+  srt_ram: 5120      # MiB
+  srt_cpu: 2
+  srt_disc_size: 0   # GiB
+
+# endregion

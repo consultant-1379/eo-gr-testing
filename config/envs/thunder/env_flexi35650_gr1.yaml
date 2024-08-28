@@ -1,0 +1,41 @@
+---
+# Common details
+ENV_NAME: flexi35650_gr1
+
+# CCD details
+NAMESPACE: gr1
+CCD_KUBECONFIG_PATH: https://arm.seli.gic.ericsson.se/artifactory/proj-eo-gr-testing-common-artifacts-generic-local/kubeconfig/flexi35650.conf
+HELM_REGISTRY_HOST: https://helm.gr1-geo-35650.awsekscm.net
+
+# GR details
+GR_ORIGINAL_PRIMARY: true
+GR_HOST: gr.gr1-geo-35650.flexilab.sero.gic.ericsson.se
+GR_USER_NAME: vnfm
+GR_USER_PASSWORD: Ericsson123!
+
+# EVNFM details
+EVNFM_HOST: https://vnfm.gr1-geo-35650.awsekscm.net
+
+EVNFM_DEFAULT_USER_NAME: vnfm
+EVNFM_DEFAULT_USER_PASSWORD: Ericsson123!
+EVNFM_DEFAULT_TENANT: master
+PV_STORAGE_CLASS: network-block
+
+EVNFM_USER_NAME: eo-gr-user
+EVNFM_USER_PASSWORD: GrTestUserPwd123!
+
+# Registry details
+GLOBAL_REGISTRY_HOST: https://registry.gr1-geo-35650.awsekscm.net
+DOCKER_REGISTRY_HOST: https://reg-loc.gr1-geo-35650.awsekscm.net
+REGISTRY_USER_NAME: vnfm
+REGISTRY_USER_PASSWORD: Ericsson123!
+
+# EM details
+EM_BASE_URL: http://localhost:58586
+EM_HOSTNAME: localhost
+EM_HOST_IP_ADDRESS: 127.0.0.1
+EM_USERNAME: vnfuser
+EM_PASSWORD: test@123
+
+# Certificate details
+INTERMEDIATE_CERTIFICATE_PATH: eo-integration-ci/RV/ci/environment/FLEXI35650/gr1/iccr/intermediate-ca.crt

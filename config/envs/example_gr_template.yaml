@@ -1,0 +1,48 @@
+---
+# Common details
+ENV_NAME:  # The environment name
+MASTER_IP:  # IP address of the master node
+MASTER_USERNAME:  # Username of the master node
+MASTER_PKEY:  # SSH private key of the master node
+
+# CCD details
+NAMESPACE:  # A namespace of the EO installation
+CCD_KUBECONFIG_PATH:  # EO Kubeconfig file path
+CCD_KUBE_API_HOST: # CCD kube API host
+HELM_REGISTRY_HOST:  # EO Helm registry host address
+EO_GAS_HOST: # EO GAS host address
+ICCR_IP: # EO Ingress Controller CR (Contour) service IP
+RO_SNMP_IP: # RO SNMP IP address
+
+# GR details
+GR_ORIGINAL_PRIMARY:  # A site that is primary after the installation by default
+GR_HOST:  # EO Geo Redundancy host
+GR_USER_NAME:  # A username for the EO Geo Redundancy host
+GR_USER_PASSWORD:  # A password for the EO Geo Redundancy host
+
+# EVNFM details
+EVNFM_HOST:  # EVNFM host
+
+EVNFM_DEFAULT_USER_NAME:  # EVNFM default username
+EVNFM_DEFAULT_USER_PASSWORD:  # EVNFM default password
+EVNFM_DEFAULT_TENANT:  # EVNFM default tenant name
+PV_STORAGE_CLASS:  # A value of eric-pm-server.server.persistentVolume.storageClass
+
+EVNFM_USER_NAME:  # non-default EVNFM username
+EVNFM_USER_PASSWORD:  # non-default EVNFM password
+
+# Registry details
+GLOBAL_REGISTRY_HOST:  # Global registry host address
+DOCKER_REGISTRY_HOST:  # Docker registry host address
+REGISTRY_USER_NAME:  # Docker registry username
+REGISTRY_USER_PASSWORD:  # Docker registry password
+
+# Certificate details
+INTERMEDIATE_CERTIFICATE_PATH: # specify relative-path to intermediate certificate in submodule repo. Eg: <submodule_repo_name>/<path_to_cert>,
+# for App Staging setup "eo-integration-ci" is used as submodule with cert, for RV "eo-install"
+
+# Cluster VIM details
+OPENSTACK_CLUSTER_AUTH_URL: # OpenStack auth url
+OPENSTACK_CLUSTER_USER_NAME: # OpenStack username
+OPENSTACK_CLUSTER_PASSWORD: # OpenStack password
+OPENSTACK_CLUSTER_PROJECT_NAME: # OpenStack project name

@@ -1,0 +1,39 @@
+---
+# Common details
+ENV_NAME: nfvi-2
+MASTER_IP: 10.120.51.21
+MASTER_USERNAME: eccd
+MASTER_PKEY: https://arm.seli.gic.ericsson.se/artifactory/proj-eo-gr-testing-common-artifacts-generic-local/ssh_private_keys/nfvi-2.pem
+
+# CCD details
+NAMESPACE: eo-deploy
+CCD_KUBECONFIG_PATH: https://arm.seli.gic.ericsson.se/artifactory/proj-eo-gr-testing-common-artifacts-generic-local/kubeconfig/nfvi-2.conf
+HELM_REGISTRY_HOST: https://helm.n103-oss16044.seli.gic.ericsson.se
+EO_GAS_HOST: gas.n103-oss16044.seli.gic.ericsson.se
+ICCR_IP: 214.6.254.98
+
+# GR details
+GR_ORIGINAL_PRIMARY: true
+GR_HOST: gr.n103-oss16044.seli.gic.ericsson.se
+GR_USER_NAME: evnfm
+GR_USER_PASSWORD: Ericsson123!
+
+# EVNFM details
+EVNFM_HOST: https://evnfm.n103-oss16044.seli.gic.ericsson.se
+
+EVNFM_DEFAULT_USER_NAME: evnfm
+EVNFM_DEFAULT_USER_PASSWORD: Ericsson123!
+EVNFM_DEFAULT_TENANT: master
+PV_STORAGE_CLASS: network-block
+
+EVNFM_USER_NAME: eo-gr-user
+EVNFM_USER_PASSWORD: GrTestUserPwd123!
+
+# Registry details
+GLOBAL_REGISTRY_HOST: reg-evnfm-gl.n103.oss16044-oss18097.seli.gic.ericsson.se
+DOCKER_REGISTRY_HOST: reg-evnfm.n103-oss16044.seli.gic.ericsson.se
+REGISTRY_USER_NAME: vnfm-reg
+REGISTRY_USER_PASSWORD: Ericsson123!
+
+# Certificate details
+INTERMEDIATE_CERTIFICATE_PATH: eo-install/resources/ssl_certificates/eo_certs/nfvi-2/intermediate-ca.crt

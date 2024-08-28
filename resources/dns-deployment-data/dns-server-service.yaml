@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: dnsmasq-server
+  name: dnsmasq-server-service
+#  namespace: gr-dnsmasq-server (uncomment when create manually)
+spec:
+  loadBalancerIP:
+  type: LoadBalancer
+  ports:
+  - name: dns-tcp
+    port: 53
+    protocol: TCP
+    targetPort: 53
+  - name: dns
+    port: 53
+    targetPort: 53
+    protocol: UDP
+  selector:
+    app: dnsmasq-server
+  sessionAffinity: None
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack

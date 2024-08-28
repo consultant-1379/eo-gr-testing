@@ -1,0 +1,39 @@
+---
+# Common details
+ENV_NAME: flexi28594
+MASTER_IP:  # IP address of the master node
+MASTER_USERNAME:  # Username of the master node
+MASTER_PKEY:  # SSH private key of the master node
+
+# CCD details
+NAMESPACE: eo-deploy
+CCD_KUBECONFIG_PATH: https://arm.seli.gic.ericsson.se/artifactory/proj-eo-gr-testing-common-artifacts-generic-local/kubeconfig/flexi28594.conf
+HELM_REGISTRY_HOST: https://helm-registry.28594-sm.flexilab.sero.gic.ericsson.se
+EO_GAS_HOST: gas.28594-sm.flexilab.sero.gic.ericsson.se
+ICCR_IP: 10.237.38.162
+
+# GR details
+GR_ORIGINAL_PRIMARY: true
+GR_HOST: gr.28594-sm.flexilab.sero.gic.ericsson.se
+GR_USER_NAME: vnfm
+GR_USER_PASSWORD: Ericsson123!
+
+# EVNFM details
+EVNFM_HOST: https://vnfm.28594-sm.flexilab.sero.gic.ericsson.se
+
+EVNFM_DEFAULT_USER_NAME: vnfm
+EVNFM_DEFAULT_USER_PASSWORD: Ericsson123!
+EVNFM_DEFAULT_TENANT: master
+PV_STORAGE_CLASS: network-block
+
+EVNFM_USER_NAME: eo-gr-user
+EVNFM_USER_PASSWORD: GrTestUserPwd123!
+
+# Registry details
+GLOBAL_REGISTRY_HOST: registry-local.28594-sm.flexilab.sero.gic.ericsson.se
+DOCKER_REGISTRY_HOST: registry.28594-sm.flexilab.sero.gic.ericsson.se
+REGISTRY_USER_NAME: vnfm
+REGISTRY_USER_PASSWORD: Ericsson123!
+
+# Certificate details
+INTERMEDIATE_CERTIFICATE_PATH: eo-integration-ci/app-staging/ci/environment/FLEXI28594/intermediate-ca.crt

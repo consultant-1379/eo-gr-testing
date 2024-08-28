@@ -1,0 +1,55 @@
+---
+url: https://10.210.212.205
+vim_host: 10.210.212.205
+vim_ip: 10.210.212.205
+vim_object_id: 02660734f56c4b378fc38afc9b3360d7
+os_admin_name: ORCH_RV_C14AVIM2_admin
+os_admin_password: admin123
+os_admin_vim_object_id: 27a2f8daebe54a27aaac1c1211ca354a
+os_user_name: ORCH_RV_C14AVIM2_user
+os_user_password: admin123
+os_user_vim_object_id: c5d5ef9c2f0f4126b040ed457e3aa6c9
+os_ssh_user:
+os_ssh_password:
+
+vim_type: OPENSTACK
+
+default_os_admin_name: ORCH_RV_C14AVIM2_admin
+default_os_admin_password: admin123
+default_os_project_name: ORCH_RV_C14AVIM2
+
+auth_url: https://cloud14a.athtem.eei.ericsson.se:13000
+project_name: ORCH_RV_C14AVIM2
+os_project_domain_id: default
+os_user_domain_name: Default
+
+# openstack endpoint ports section:
+endpoints:
+  - keystone:
+      - version: 3.0
+      - port: 13000
+      - uri: /v3.0
+  - neutron:
+      - version: 2.0
+      - port: 13696
+      - uri: /
+  - nova:
+      - version: 2.1
+      - port: 13774
+      - uri: /v2.1
+  - heatstack:
+      - version: 1.0
+      - port: 13004
+      - uri: /v1
+  - glance:
+      - version: 2.0
+      - port: 13292
+      - uri: /
+  - cinder:
+      - version: 2.0
+      - port: 13776
+      - uri: /v2
+  - placement:
+      - version: 1.0
+      - port: 13778
+      - uri: /placement
